@@ -1,0 +1,7748 @@
+[
+  {
+    "id": "scenario-pipe-0001",
+    "scenario": "Find ERROR lines in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | grep 'ERROR'",
+    "example": "cat /var/log/nginx/access.log | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0002",
+    "scenario": "Case-insensitive search in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | grep -i 'warn'",
+    "example": "cat /var/log/nginx/access.log | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0003",
+    "scenario": "Exclude comment lines from nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | grep -v '^#'",
+    "example": "cat /var/log/nginx/access.log | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0004",
+    "scenario": "Count matching lines in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | grep -c 'FAIL'",
+    "example": "cat /var/log/nginx/access.log | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0005",
+    "scenario": "Match multiple patterns in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | grep -E 'error|warn'",
+    "example": "cat /var/log/nginx/access.log | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0006",
+    "scenario": "Extract first column from nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | awk '{print $1}'",
+    "example": "cat /var/log/nginx/access.log | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0007",
+    "scenario": "Filter rows by value in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | awk '$5 > 500 {print $1, $5}'",
+    "example": "cat /var/log/nginx/access.log | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0008",
+    "scenario": "Replace text in output of nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | sed 's/localhost/127.0.0.1/g'",
+    "example": "cat /var/log/nginx/access.log | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0009",
+    "scenario": "Extract a field from nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | cut -d':' -f1",
+    "example": "cat /var/log/nginx/access.log | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0010",
+    "scenario": "Sort output from nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | sort",
+    "example": "cat /var/log/nginx/access.log | sort",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0011",
+    "scenario": "Sort numerically, output from nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | sort -n",
+    "example": "cat /var/log/nginx/access.log | sort -n",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0012",
+    "scenario": "Count unique lines in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | uniq -c",
+    "example": "cat /var/log/nginx/access.log | uniq -c",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0013",
+    "scenario": "Count lines in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | wc -l",
+    "example": "cat /var/log/nginx/access.log | wc -l",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0014",
+    "scenario": "Show first 20 lines of nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | head -20",
+    "example": "cat /var/log/nginx/access.log | head -20",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0015",
+    "scenario": "Show last 50 lines of nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | tail -50",
+    "example": "cat /var/log/nginx/access.log | tail -50",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0016",
+    "scenario": "Page through output of nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | less",
+    "example": "cat /var/log/nginx/access.log | less",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0017",
+    "scenario": "Save and display output of nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | tee /tmp/output.log",
+    "example": "cat /var/log/nginx/access.log | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0018",
+    "scenario": "Pass output of nginx access log to another command",
+    "codePattern": "cat /var/log/nginx/access.log | xargs -I{} rm -v {}",
+    "example": "cat /var/log/nginx/access.log | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0019",
+    "scenario": "Transform characters in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | tr -d '\\r'",
+    "example": "cat /var/log/nginx/access.log | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0020",
+    "scenario": "Format columns in nginx access log",
+    "codePattern": "cat /var/log/nginx/access.log | column -t",
+    "example": "cat /var/log/nginx/access.log | column -t",
+    "tags": [
+      "pipes",
+      "logs",
+      "nginx",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0021",
+    "scenario": "Find ERROR lines in application log",
+    "codePattern": "cat app.log | grep 'ERROR'",
+    "example": "cat app.log | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0022",
+    "scenario": "Case-insensitive search in application log",
+    "codePattern": "cat app.log | grep -i 'warn'",
+    "example": "cat app.log | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0023",
+    "scenario": "Exclude comment lines from application log",
+    "codePattern": "cat app.log | grep -v '^#'",
+    "example": "cat app.log | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0024",
+    "scenario": "Count matching lines in application log",
+    "codePattern": "cat app.log | grep -c 'FAIL'",
+    "example": "cat app.log | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0025",
+    "scenario": "Match multiple patterns in application log",
+    "codePattern": "cat app.log | grep -E 'error|warn'",
+    "example": "cat app.log | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0026",
+    "scenario": "Extract first column from application log",
+    "codePattern": "cat app.log | awk '{print $1}'",
+    "example": "cat app.log | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0027",
+    "scenario": "Filter rows by value in application log",
+    "codePattern": "cat app.log | awk '$5 > 500 {print $1, $5}'",
+    "example": "cat app.log | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0028",
+    "scenario": "Replace text in output of application log",
+    "codePattern": "cat app.log | sed 's/localhost/127.0.0.1/g'",
+    "example": "cat app.log | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0029",
+    "scenario": "Extract a field from application log",
+    "codePattern": "cat app.log | cut -d':' -f1",
+    "example": "cat app.log | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0030",
+    "scenario": "Sort output from application log",
+    "codePattern": "cat app.log | sort",
+    "example": "cat app.log | sort",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0031",
+    "scenario": "Sort numerically, output from application log",
+    "codePattern": "cat app.log | sort -n",
+    "example": "cat app.log | sort -n",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0032",
+    "scenario": "Count unique lines in application log",
+    "codePattern": "cat app.log | uniq -c",
+    "example": "cat app.log | uniq -c",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0033",
+    "scenario": "Count lines in application log",
+    "codePattern": "cat app.log | wc -l",
+    "example": "cat app.log | wc -l",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0034",
+    "scenario": "Show first 20 lines of application log",
+    "codePattern": "cat app.log | head -20",
+    "example": "cat app.log | head -20",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0035",
+    "scenario": "Show last 50 lines of application log",
+    "codePattern": "cat app.log | tail -50",
+    "example": "cat app.log | tail -50",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0036",
+    "scenario": "Page through output of application log",
+    "codePattern": "cat app.log | less",
+    "example": "cat app.log | less",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0037",
+    "scenario": "Save and display output of application log",
+    "codePattern": "cat app.log | tee /tmp/output.log",
+    "example": "cat app.log | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0038",
+    "scenario": "Pass output of application log to another command",
+    "codePattern": "cat app.log | xargs -I{} rm -v {}",
+    "example": "cat app.log | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0039",
+    "scenario": "Transform characters in application log",
+    "codePattern": "cat app.log | tr -d '\\r'",
+    "example": "cat app.log | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0040",
+    "scenario": "Format columns in application log",
+    "codePattern": "cat app.log | column -t",
+    "example": "cat app.log | column -t",
+    "tags": [
+      "pipes",
+      "logs",
+      "app",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0041",
+    "scenario": "Find ERROR lines in system log",
+    "codePattern": "cat /var/log/syslog | grep 'ERROR'",
+    "example": "cat /var/log/syslog | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0042",
+    "scenario": "Case-insensitive search in system log",
+    "codePattern": "cat /var/log/syslog | grep -i 'warn'",
+    "example": "cat /var/log/syslog | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0043",
+    "scenario": "Exclude comment lines from system log",
+    "codePattern": "cat /var/log/syslog | grep -v '^#'",
+    "example": "cat /var/log/syslog | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0044",
+    "scenario": "Count matching lines in system log",
+    "codePattern": "cat /var/log/syslog | grep -c 'FAIL'",
+    "example": "cat /var/log/syslog | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0045",
+    "scenario": "Match multiple patterns in system log",
+    "codePattern": "cat /var/log/syslog | grep -E 'error|warn'",
+    "example": "cat /var/log/syslog | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0046",
+    "scenario": "Extract first column from system log",
+    "codePattern": "cat /var/log/syslog | awk '{print $1}'",
+    "example": "cat /var/log/syslog | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0047",
+    "scenario": "Filter rows by value in system log",
+    "codePattern": "cat /var/log/syslog | awk '$5 > 500 {print $1, $5}'",
+    "example": "cat /var/log/syslog | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0048",
+    "scenario": "Replace text in output of system log",
+    "codePattern": "cat /var/log/syslog | sed 's/localhost/127.0.0.1/g'",
+    "example": "cat /var/log/syslog | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0049",
+    "scenario": "Extract a field from system log",
+    "codePattern": "cat /var/log/syslog | cut -d':' -f1",
+    "example": "cat /var/log/syslog | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0050",
+    "scenario": "Sort output from system log",
+    "codePattern": "cat /var/log/syslog | sort",
+    "example": "cat /var/log/syslog | sort",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0051",
+    "scenario": "Sort numerically, output from system log",
+    "codePattern": "cat /var/log/syslog | sort -n",
+    "example": "cat /var/log/syslog | sort -n",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0052",
+    "scenario": "Count unique lines in system log",
+    "codePattern": "cat /var/log/syslog | uniq -c",
+    "example": "cat /var/log/syslog | uniq -c",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0053",
+    "scenario": "Count lines in system log",
+    "codePattern": "cat /var/log/syslog | wc -l",
+    "example": "cat /var/log/syslog | wc -l",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0054",
+    "scenario": "Show first 20 lines of system log",
+    "codePattern": "cat /var/log/syslog | head -20",
+    "example": "cat /var/log/syslog | head -20",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0055",
+    "scenario": "Show last 50 lines of system log",
+    "codePattern": "cat /var/log/syslog | tail -50",
+    "example": "cat /var/log/syslog | tail -50",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0056",
+    "scenario": "Page through output of system log",
+    "codePattern": "cat /var/log/syslog | less",
+    "example": "cat /var/log/syslog | less",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0057",
+    "scenario": "Save and display output of system log",
+    "codePattern": "cat /var/log/syslog | tee /tmp/output.log",
+    "example": "cat /var/log/syslog | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0058",
+    "scenario": "Pass output of system log to another command",
+    "codePattern": "cat /var/log/syslog | xargs -I{} rm -v {}",
+    "example": "cat /var/log/syslog | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0059",
+    "scenario": "Transform characters in system log",
+    "codePattern": "cat /var/log/syslog | tr -d '\\r'",
+    "example": "cat /var/log/syslog | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0060",
+    "scenario": "Format columns in system log",
+    "codePattern": "cat /var/log/syslog | column -t",
+    "example": "cat /var/log/syslog | column -t",
+    "tags": [
+      "pipes",
+      "logs",
+      "system",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0061",
+    "scenario": "Find ERROR lines in web access log",
+    "codePattern": "cat access.log | grep 'ERROR'",
+    "example": "cat access.log | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0062",
+    "scenario": "Case-insensitive search in web access log",
+    "codePattern": "cat access.log | grep -i 'warn'",
+    "example": "cat access.log | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0063",
+    "scenario": "Exclude comment lines from web access log",
+    "codePattern": "cat access.log | grep -v '^#'",
+    "example": "cat access.log | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0064",
+    "scenario": "Count matching lines in web access log",
+    "codePattern": "cat access.log | grep -c 'FAIL'",
+    "example": "cat access.log | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0065",
+    "scenario": "Match multiple patterns in web access log",
+    "codePattern": "cat access.log | grep -E 'error|warn'",
+    "example": "cat access.log | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0066",
+    "scenario": "Extract first column from web access log",
+    "codePattern": "cat access.log | awk '{print $1}'",
+    "example": "cat access.log | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0067",
+    "scenario": "Filter rows by value in web access log",
+    "codePattern": "cat access.log | awk '$5 > 500 {print $1, $5}'",
+    "example": "cat access.log | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0068",
+    "scenario": "Replace text in output of web access log",
+    "codePattern": "cat access.log | sed 's/localhost/127.0.0.1/g'",
+    "example": "cat access.log | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0069",
+    "scenario": "Extract a field from web access log",
+    "codePattern": "cat access.log | cut -d':' -f1",
+    "example": "cat access.log | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0070",
+    "scenario": "Sort output from web access log",
+    "codePattern": "cat access.log | sort",
+    "example": "cat access.log | sort",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0071",
+    "scenario": "Sort numerically, output from web access log",
+    "codePattern": "cat access.log | sort -n",
+    "example": "cat access.log | sort -n",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0072",
+    "scenario": "Count unique lines in web access log",
+    "codePattern": "cat access.log | uniq -c",
+    "example": "cat access.log | uniq -c",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0073",
+    "scenario": "Count lines in web access log",
+    "codePattern": "cat access.log | wc -l",
+    "example": "cat access.log | wc -l",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0074",
+    "scenario": "Show first 20 lines of web access log",
+    "codePattern": "cat access.log | head -20",
+    "example": "cat access.log | head -20",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0075",
+    "scenario": "Show last 50 lines of web access log",
+    "codePattern": "cat access.log | tail -50",
+    "example": "cat access.log | tail -50",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0076",
+    "scenario": "Page through output of web access log",
+    "codePattern": "cat access.log | less",
+    "example": "cat access.log | less",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0077",
+    "scenario": "Save and display output of web access log",
+    "codePattern": "cat access.log | tee /tmp/output.log",
+    "example": "cat access.log | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0078",
+    "scenario": "Pass output of web access log to another command",
+    "codePattern": "cat access.log | xargs -I{} rm -v {}",
+    "example": "cat access.log | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0079",
+    "scenario": "Transform characters in web access log",
+    "codePattern": "cat access.log | tr -d '\\r'",
+    "example": "cat access.log | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0080",
+    "scenario": "Format columns in web access log",
+    "codePattern": "cat access.log | column -t",
+    "example": "cat access.log | column -t",
+    "tags": [
+      "pipes",
+      "logs",
+      "web",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0081",
+    "scenario": "Find ERROR lines in error log",
+    "codePattern": "cat error.log | grep 'ERROR'",
+    "example": "cat error.log | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0082",
+    "scenario": "Case-insensitive search in error log",
+    "codePattern": "cat error.log | grep -i 'warn'",
+    "example": "cat error.log | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0083",
+    "scenario": "Exclude comment lines from error log",
+    "codePattern": "cat error.log | grep -v '^#'",
+    "example": "cat error.log | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0084",
+    "scenario": "Count matching lines in error log",
+    "codePattern": "cat error.log | grep -c 'FAIL'",
+    "example": "cat error.log | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0085",
+    "scenario": "Match multiple patterns in error log",
+    "codePattern": "cat error.log | grep -E 'error|warn'",
+    "example": "cat error.log | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0086",
+    "scenario": "Extract first column from error log",
+    "codePattern": "cat error.log | awk '{print $1}'",
+    "example": "cat error.log | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0087",
+    "scenario": "Filter rows by value in error log",
+    "codePattern": "cat error.log | awk '$5 > 500 {print $1, $5}'",
+    "example": "cat error.log | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0088",
+    "scenario": "Replace text in output of error log",
+    "codePattern": "cat error.log | sed 's/localhost/127.0.0.1/g'",
+    "example": "cat error.log | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0089",
+    "scenario": "Extract a field from error log",
+    "codePattern": "cat error.log | cut -d':' -f1",
+    "example": "cat error.log | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0090",
+    "scenario": "Sort output from error log",
+    "codePattern": "cat error.log | sort",
+    "example": "cat error.log | sort",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0091",
+    "scenario": "Sort numerically, output from error log",
+    "codePattern": "cat error.log | sort -n",
+    "example": "cat error.log | sort -n",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0092",
+    "scenario": "Count unique lines in error log",
+    "codePattern": "cat error.log | uniq -c",
+    "example": "cat error.log | uniq -c",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0093",
+    "scenario": "Count lines in error log",
+    "codePattern": "cat error.log | wc -l",
+    "example": "cat error.log | wc -l",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0094",
+    "scenario": "Show first 20 lines of error log",
+    "codePattern": "cat error.log | head -20",
+    "example": "cat error.log | head -20",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0095",
+    "scenario": "Show last 50 lines of error log",
+    "codePattern": "cat error.log | tail -50",
+    "example": "cat error.log | tail -50",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0096",
+    "scenario": "Page through output of error log",
+    "codePattern": "cat error.log | less",
+    "example": "cat error.log | less",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0097",
+    "scenario": "Save and display output of error log",
+    "codePattern": "cat error.log | tee /tmp/output.log",
+    "example": "cat error.log | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0098",
+    "scenario": "Pass output of error log to another command",
+    "codePattern": "cat error.log | xargs -I{} rm -v {}",
+    "example": "cat error.log | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0099",
+    "scenario": "Transform characters in error log",
+    "codePattern": "cat error.log | tr -d '\\r'",
+    "example": "cat error.log | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0100",
+    "scenario": "Format columns in error log",
+    "codePattern": "cat error.log | column -t",
+    "example": "cat error.log | column -t",
+    "tags": [
+      "pipes",
+      "logs",
+      "errors",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0101",
+    "scenario": "Find ERROR lines in running processes",
+    "codePattern": "ps aux | grep 'ERROR'",
+    "example": "ps aux | grep 'ERROR'",
+    "tags": [
+      "pipes",
+      "process",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0102",
+    "scenario": "Case-insensitive search in running processes",
+    "codePattern": "ps aux | grep -i 'warn'",
+    "example": "ps aux | grep -i 'warn'",
+    "tags": [
+      "pipes",
+      "process",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0103",
+    "scenario": "Exclude comment lines from running processes",
+    "codePattern": "ps aux | grep -v '^#'",
+    "example": "ps aux | grep -v '^#'",
+    "tags": [
+      "pipes",
+      "process",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0104",
+    "scenario": "Count matching lines in running processes",
+    "codePattern": "ps aux | grep -c 'FAIL'",
+    "example": "ps aux | grep -c 'FAIL'",
+    "tags": [
+      "pipes",
+      "process",
+      "grep"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0105",
+    "scenario": "Match multiple patterns in running processes",
+    "codePattern": "ps aux | grep -E 'error|warn'",
+    "example": "ps aux | grep -E 'error|warn'",
+    "tags": [
+      "pipes",
+      "process",
+      "grep"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0106",
+    "scenario": "Extract first column from running processes",
+    "codePattern": "ps aux | awk '{print $1}'",
+    "example": "ps aux | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "process",
+      "awk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0107",
+    "scenario": "Filter rows by value in running processes",
+    "codePattern": "ps aux | awk '$5 > 500 {print $1, $5}'",
+    "example": "ps aux | awk '$5 > 500 {print $1, $5}'",
+    "tags": [
+      "pipes",
+      "process",
+      "awk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0108",
+    "scenario": "Replace text in output of running processes",
+    "codePattern": "ps aux | sed 's/localhost/127.0.0.1/g'",
+    "example": "ps aux | sed 's/localhost/127.0.0.1/g'",
+    "tags": [
+      "pipes",
+      "process",
+      "sed"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0109",
+    "scenario": "Extract a field from running processes",
+    "codePattern": "ps aux | cut -d':' -f1",
+    "example": "ps aux | cut -d':' -f1",
+    "tags": [
+      "pipes",
+      "process",
+      "cut"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0110",
+    "scenario": "Sort output from running processes",
+    "codePattern": "ps aux | sort",
+    "example": "ps aux | sort",
+    "tags": [
+      "pipes",
+      "process",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0111",
+    "scenario": "Sort numerically, output from running processes",
+    "codePattern": "ps aux | sort -n",
+    "example": "ps aux | sort -n",
+    "tags": [
+      "pipes",
+      "process",
+      "sort"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0112",
+    "scenario": "Count unique lines in running processes",
+    "codePattern": "ps aux | uniq -c",
+    "example": "ps aux | uniq -c",
+    "tags": [
+      "pipes",
+      "process",
+      "uniq"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0113",
+    "scenario": "Count lines in running processes",
+    "codePattern": "ps aux | wc -l",
+    "example": "ps aux | wc -l",
+    "tags": [
+      "pipes",
+      "process",
+      "wc"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0114",
+    "scenario": "Show first 20 lines of running processes",
+    "codePattern": "ps aux | head -20",
+    "example": "ps aux | head -20",
+    "tags": [
+      "pipes",
+      "process",
+      "head"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0115",
+    "scenario": "Show last 50 lines of running processes",
+    "codePattern": "ps aux | tail -50",
+    "example": "ps aux | tail -50",
+    "tags": [
+      "pipes",
+      "process",
+      "tail"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0116",
+    "scenario": "Page through output of running processes",
+    "codePattern": "ps aux | less",
+    "example": "ps aux | less",
+    "tags": [
+      "pipes",
+      "process",
+      "less"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0117",
+    "scenario": "Save and display output of running processes",
+    "codePattern": "ps aux | tee /tmp/output.log",
+    "example": "ps aux | tee /tmp/output.log",
+    "tags": [
+      "pipes",
+      "process",
+      "tee"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0118",
+    "scenario": "Pass output of running processes to another command",
+    "codePattern": "ps aux | xargs -I{} rm -v {}",
+    "example": "ps aux | xargs -I{} rm -v {}",
+    "tags": [
+      "pipes",
+      "process",
+      "xargs"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0119",
+    "scenario": "Transform characters in running processes",
+    "codePattern": "ps aux | tr -d '\\r'",
+    "example": "ps aux | tr -d '\\r'",
+    "tags": [
+      "pipes",
+      "process",
+      "tr"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0120",
+    "scenario": "Format columns in running processes",
+    "codePattern": "ps aux | column -t",
+    "example": "ps aux | column -t",
+    "tags": [
+      "pipes",
+      "process",
+      "column"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0121",
+    "scenario": "Count HTTP 404 responses in access log",
+    "codePattern": "cat access.log | grep '404' | wc -l",
+    "example": "cat /var/log/nginx/access.log | grep '404' | wc -l",
+    "tags": [
+      "pipes",
+      "chain",
+      "logs",
+      "nginx"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0122",
+    "scenario": "Show last 20 error lines from application log",
+    "codePattern": "cat app.log | grep 'ERROR' | tail -20",
+    "example": "cat app.log | grep 'ERROR' | tail -20",
+    "tags": [
+      "pipes",
+      "chain",
+      "logs",
+      "app"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0123",
+    "scenario": "Extract PIDs of nginx worker processes",
+    "codePattern": "ps aux | grep nginx | awk '{print $2}'",
+    "example": "cat /var/log/syslog | grep nginx | awk '{print $2}'",
+    "tags": [
+      "pipes",
+      "chain",
+      "logs",
+      "system"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0124",
+    "scenario": "Count duplicate lines in command output",
+    "codePattern": "command | sort | uniq -c",
+    "example": "cat access.log | sort | uniq -c",
+    "tags": [
+      "pipes",
+      "chain",
+      "logs",
+      "web"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0125",
+    "scenario": "Find most frequent log entries",
+    "codePattern": "cat log | sort | uniq -c | sort -nr | head",
+    "example": "cat error.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "pipes",
+      "chain",
+      "logs",
+      "errors"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0126",
+    "scenario": "Count occurrences of first column values",
+    "codePattern": "cat data | awk '{print $1}' | sort | uniq -c",
+    "example": "ps aux | awk '{print $1}' | sort | uniq -c",
+    "tags": [
+      "pipes",
+      "chain",
+      "process"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0127",
+    "scenario": "Count non-empty lines in output",
+    "codePattern": "cat file | grep -v '^$' | wc -l",
+    "example": "docker ps | grep -v '^$' | wc -l",
+    "tags": [
+      "pipes",
+      "chain",
+      "docker"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0128",
+    "scenario": "Count running Docker containers",
+    "codePattern": "docker ps | grep Running | wc -l",
+    "example": "kubectl get pods -A | grep Running | wc -l",
+    "tags": [
+      "pipes",
+      "chain",
+      "kubernetes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0129",
+    "scenario": "List pods in CrashLoopBackOff state",
+    "codePattern": "kubectl get pods -A | grep CrashLoop | awk '{print $1}'",
+    "example": "find . | grep CrashLoop | awk '{print $1}'",
+    "tags": [
+      "pipes",
+      "chain",
+      "files"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0130",
+    "scenario": "Filter and save warnings while viewing live",
+    "codePattern": "tail -f app.log | grep -E 'error|warn' | tee issues.log",
+    "example": "history | grep -E 'error|warn' | tee issues.log",
+    "tags": [
+      "pipes",
+      "chain",
+      "shell"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0131",
+    "scenario": "Show top 10 entries by numeric second column",
+    "codePattern": "cat data.tsv | sort -k2 -n | head -10",
+    "example": "df -h | sort -k2 -n | head -10",
+    "tags": [
+      "pipes",
+      "chain",
+      "disk"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0132",
+    "scenario": "Format CSV-like output as aligned columns",
+    "codePattern": "cat data.csv | sed 's/,/\\t/g' | column -t",
+    "example": "netstat -tlnp | sed 's/,/\\t/g' | column -t",
+    "tags": [
+      "pipes",
+      "chain",
+      "network"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0133",
+    "scenario": "List listening ports from socket output",
+    "codePattern": "ss -tlnp | grep LISTEN | awk '{print $4}'",
+    "example": "ss -tlnp | grep LISTEN | awk '{print $4}'",
+    "tags": [
+      "pipes",
+      "chain",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0134",
+    "scenario": "Filter out localhost bindings from port list",
+    "codePattern": "netstat -tlnp | grep -v '0.0.0.0' | head",
+    "example": "git log --oneline | grep -v '0.0.0.0' | head",
+    "tags": [
+      "pipes",
+      "chain",
+      "git"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0135",
+    "scenario": "Show recent fix commits from git log",
+    "codePattern": "git log --oneline | grep fix | head -5",
+    "example": "curl -s https://api.example.com/data | grep fix | head -5",
+    "tags": [
+      "pipes",
+      "chain",
+      "api"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0136",
+    "scenario": "Save directory listing to a text file",
+    "codePattern": "ls -la > listing.txt",
+    "example": "ls -la > listing.txt",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0137",
+    "scenario": "Append timestamp to a cron log",
+    "codePattern": "echo \"msg\" >> /var/log/cron.log",
+    "example": "echo \"$(date): job ran\" >> /var/log/cron.log",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0138",
+    "scenario": "Capture build output and errors in one log",
+    "codePattern": "npm run build > build.log 2>&1",
+    "example": "npm run build > build.log 2>&1",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0139",
+    "scenario": "Silence all output from a noisy command",
+    "codePattern": "find / -name \"*.tmp\" 2>/dev/null > /dev/null",
+    "example": "find / -name \"*.tmp\" 2>/dev/null > /dev/null",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0140",
+    "scenario": "Send errors to separate file while keeping stdout",
+    "codePattern": "node migrate.js 2> migration-errors.log",
+    "example": "node migrate.js 2> migration-errors.log",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0141",
+    "scenario": "Feed SQL script to database from file",
+    "codePattern": "mysql -u root dbname < schema.sql",
+    "example": "mysql -u root dbname < schema.sql",
+    "tags": [
+      "redirect",
+      "pipes",
+      "database"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0142",
+    "scenario": "Count lines in a file via stdin redirect",
+    "codePattern": "wc -l < access.log",
+    "example": "wc -l < access.log",
+    "tags": [
+      "redirect",
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0143",
+    "scenario": "Pipe build output through tee to log and screen",
+    "codePattern": "make 2>&1 | tee make.log",
+    "example": "make 2>&1 | tee make.log",
+    "tags": [
+      "pipe",
+      "tee",
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0144",
+    "scenario": "Use pipefail in script so pipeline errors are caught",
+    "codePattern": "set -euo pipefail",
+    "example": "set -euo pipefail",
+    "tags": [
+      "pipe",
+      "scripting",
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0145",
+    "scenario": "Diff sorted output of two files without temp files",
+    "codePattern": "diff <(sort old.txt) <(sort new.txt)",
+    "example": "diff <(sort old.txt) <(sort new.txt)",
+    "tags": [
+      "pipe",
+      "advanced",
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0146",
+    "scenario": "List running Java processes",
+    "codePattern": "ps aux | grep java | grep -v grep",
+    "example": "ps aux | grep java | grep -v grep",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0147",
+    "scenario": "Find largest files in current directory",
+    "codePattern": "du -ah . | sort -rh | head -20",
+    "example": "du -ah . | sort -rh | head -20",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0148",
+    "scenario": "Extract unique IP addresses from access log",
+    "codePattern": "awk '{print $1}' access.log | sort | uniq -c | sort -nr | head",
+    "example": "awk '{print $1}' access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0149",
+    "scenario": "Monitor error rate in live log stream",
+    "codePattern": "tail -f app.log | grep --line-buffered 'ERROR'",
+    "example": "tail -f app.log | grep --line-buffered 'ERROR'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0150",
+    "scenario": "Delete all .pyc files found by find",
+    "codePattern": "find . -name '*.pyc' | xargs rm -f",
+    "example": "find . -name '*.pyc' | xargs rm -f",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0151",
+    "scenario": "Gzip all log files in directory",
+    "codePattern": "ls *.log | xargs gzip",
+    "example": "ls *.log | xargs gzip",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0152",
+    "scenario": "Check which npm packages are outdated",
+    "codePattern": "npm outdated | cat",
+    "example": "npm outdated | cat",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0153",
+    "scenario": "Filter docker images by repository name",
+    "codePattern": "docker images | grep myapp",
+    "example": "docker images | grep myapp",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0154",
+    "scenario": "Get pod names only from kubectl output",
+    "codePattern": "kubectl get pods -n prod | awk 'NR>1 {print $1}'",
+    "example": "kubectl get pods -n prod | awk 'NR>1 {print $1}'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0155",
+    "scenario": "Count lines of code in Python files",
+    "codePattern": "find . -name '*.py' | xargs wc -l | tail -1",
+    "example": "find . -name '*.py' | xargs wc -l | tail -1",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0156",
+    "scenario": "Show disk usage of top 10 directories",
+    "codePattern": "du -h /var | sort -rh | head -10",
+    "example": "du -h /var | sort -rh | head -10",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0157",
+    "scenario": "Find failed SSH login attempts",
+    "codePattern": "grep 'Failed password' /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr",
+    "example": "grep 'Failed password' /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0158",
+    "scenario": "Parse JSON API response with jq",
+    "codePattern": "curl -s https://api.github.com/users/octocat | jq '.login'",
+    "example": "curl -s https://api.github.com/users/octocat | jq '.login'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0159",
+    "scenario": "Filter journalctl output by service unit",
+    "codePattern": "journalctl -u nginx | grep error",
+    "example": "journalctl -u nginx | grep error",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0160",
+    "scenario": "List open files for a process",
+    "codePattern": "lsof -p 1234 | grep REG",
+    "example": "lsof -p 1234 | grep REG",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0161",
+    "scenario": "Show environment variables sorted",
+    "codePattern": "env | sort",
+    "example": "env | sort",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0162",
+    "scenario": "Find world-writable files",
+    "codePattern": "find / -perm -002 2>/dev/null | head",
+    "example": "find / -perm -002 2>/dev/null | head",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0163",
+    "scenario": "Extract HTTP status codes from log",
+    "codePattern": "awk '{print $9}' access.log | sort | uniq -c | sort -nr",
+    "example": "awk '{print $9}' access.log | sort | uniq -c | sort -nr",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0164",
+    "scenario": "Pipe curl through grep to check health endpoint",
+    "codePattern": "curl -s localhost:8080/health | grep ok",
+    "example": "curl -s localhost:8080/health | grep ok",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0165",
+    "scenario": "Rename batch of files with sed and xargs",
+    "codePattern": "ls *.txt | sed 's/.txt$//' | xargs -I{} mv {}.txt {}.bak",
+    "example": "ls *.txt | sed 's/.txt$//' | xargs -I{} mv {}.txt {}.bak",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0166",
+    "scenario": "Show unique usernames from passwd file",
+    "codePattern": "cut -d: -f1 /etc/passwd | sort | uniq",
+    "example": "cut -d: -f1 /etc/passwd | sort | uniq",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0167",
+    "scenario": "Filter apt search results",
+    "codePattern": "apt search nginx | grep '^nginx/'",
+    "example": "apt search nginx | grep '^nginx/'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0168",
+    "scenario": "Count docker containers by status",
+    "codePattern": "docker ps -a | awk 'NR>1 {print $NF}' | sort | uniq -c",
+    "example": "docker ps -a | awk 'NR>1 {print $NF}' | sort | uniq -c",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0169",
+    "scenario": "Pipe terraform plan to grep for changes",
+    "codePattern": "terraform plan -no-color 2>&1 | grep '#'",
+    "example": "terraform plan -no-color 2>&1 | grep '#'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0170",
+    "scenario": "Extract certificate expiry from openssl",
+    "codePattern": "echo | openssl s_client -connect example.com:443 2>/dev/null | openssl x509 -noout -enddate",
+    "example": "echo | openssl s_client -connect example.com:443 2>/dev/null | openssl x509 -noout -enddate",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0171",
+    "scenario": "Show listening ports owned by node process",
+    "codePattern": "ss -tlnp | grep node",
+    "example": "ss -tlnp | grep node",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0172",
+    "scenario": "Filter git branches containing feature name",
+    "codePattern": "git branch -a | grep feature/login",
+    "example": "git branch -a | grep feature/login",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0173",
+    "scenario": "Count TODO comments in codebase",
+    "codePattern": "grep -r 'TODO' src/ | wc -l",
+    "example": "grep -r 'TODO' src/ | wc -l",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0174",
+    "scenario": "Show last 10 ansible playbook tasks",
+    "codePattern": "ansible-playbook site.yml -v | tail -20",
+    "example": "ansible-playbook site.yml -v | tail -20",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0175",
+    "scenario": "Pipe mysql query output through column",
+    "codePattern": "mysql -e 'SHOW DATABASES' | column -t",
+    "example": "mysql -e 'SHOW DATABASES' | column -t",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0176",
+    "scenario": "Filter dmesg for USB device events",
+    "codePattern": "dmesg | grep -i usb | tail -20",
+    "example": "dmesg | grep -i usb | tail -20",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-pipe-0177",
+    "scenario": "List systemd failed units",
+    "codePattern": "systemctl list-units --failed | grep failed",
+    "example": "systemctl list-units --failed | grep failed",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0178",
+    "scenario": "Show redis slow log entries",
+    "codePattern": "redis-cli slowlog get 10 | head",
+    "example": "redis-cli slowlog get 10 | head",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-pipe-0179",
+    "scenario": "Extract S3 bucket names from aws cli",
+    "codePattern": "aws s3 ls | awk '{print $3}'",
+    "example": "aws s3 ls | awk '{print $3}'",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0180",
+    "scenario": "Pipe helm list through grep for release",
+    "codePattern": "helm list -A | grep my-release",
+    "example": "helm list -A | grep my-release",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0181",
+    "scenario": "Count nginx worker connections",
+    "codePattern": "ss -ant | grep :80 | wc -l",
+    "example": "ss -ant | grep :80 | wc -l",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-pipe-0182",
+    "scenario": "Show unique MIME types in log",
+    "codePattern": "awk '{print $12}' access.log | sort | uniq -c | sort -nr",
+    "example": "awk '{print $12}' access.log | sort | uniq -c | sort -nr",
+    "tags": [
+      "pipes"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-basic-0001",
+    "scenario": "Check your current working directory",
+    "codePattern": "pwd",
+    "example": "pwd",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0002",
+    "scenario": "Print the physical path without symlinks",
+    "codePattern": "pwd -P",
+    "example": "pwd -P",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0003",
+    "scenario": "List all files including hidden ones",
+    "codePattern": "ls -la",
+    "example": "ls -la",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0004",
+    "scenario": "List files with human-readable sizes",
+    "codePattern": "ls -lh",
+    "example": "ls -lh /var/log",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0005",
+    "scenario": "List only directories",
+    "codePattern": "ls -d */",
+    "example": "ls -d */",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0006",
+    "scenario": "List files sorted by modification time",
+    "codePattern": "ls -lt",
+    "example": "ls -lt",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0007",
+    "scenario": "List files one per line",
+    "codePattern": "ls -1",
+    "example": "ls -1 | wc -l",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0008",
+    "scenario": "Go to your home directory",
+    "codePattern": "cd ~",
+    "example": "cd ~",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0009",
+    "scenario": "Go up one directory level",
+    "codePattern": "cd ..",
+    "example": "cd ..",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0010",
+    "scenario": "Go to the root of the filesystem",
+    "codePattern": "cd /",
+    "example": "cd /",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0011",
+    "scenario": "Return to the previous directory",
+    "codePattern": "cd -",
+    "example": "cd -",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0012",
+    "scenario": "Change into a specific project folder",
+    "codePattern": "cd path",
+    "example": "cd ~/projects/my-app",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0013",
+    "scenario": "Create a single new directory",
+    "codePattern": "mkdir name",
+    "example": "mkdir backups",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0014",
+    "scenario": "Create a nested directory tree",
+    "codePattern": "mkdir -p",
+    "example": "mkdir -p src/utils/helpers",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0015",
+    "scenario": "Create an empty file",
+    "codePattern": "touch file",
+    "example": "touch notes.txt",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0016",
+    "scenario": "Create multiple files at once",
+    "codePattern": "touch f1 f2",
+    "example": "touch file1.txt file2.txt",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0017",
+    "scenario": "Copy a file to another folder",
+    "codePattern": "cp src dst",
+    "example": "cp report.pdf ~/Documents/",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0018",
+    "scenario": "Copy a file preserving permissions",
+    "codePattern": "cp -p",
+    "example": "cp -p original.conf backup.conf",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0019",
+    "scenario": "Copy a directory recursively",
+    "codePattern": "cp -r",
+    "example": "cp -r project/ project-backup/",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0020",
+    "scenario": "Rename a file",
+    "codePattern": "mv old new",
+    "example": "mv draft.txt final.txt",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0021",
+    "scenario": "Move a file into another directory",
+    "codePattern": "mv file dir/",
+    "example": "mv image.png ~/Pictures/",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0022",
+    "scenario": "Delete a file",
+    "codePattern": "rm file",
+    "example": "rm temp.log",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0023",
+    "scenario": "Delete an empty directory",
+    "codePattern": "rmdir dir",
+    "example": "rmdir empty-folder",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0024",
+    "scenario": "Remove a directory and all its contents",
+    "codePattern": "rm -rf dir",
+    "example": "rm -rf old-cache/",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0025",
+    "scenario": "Create a symbolic link to a file",
+    "codePattern": "ln -s target link",
+    "example": "ln -s /var/log/nginx nginx-logs",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0026",
+    "scenario": "Show where a symbolic link points",
+    "codePattern": "readlink -f",
+    "example": "readlink -f /usr/bin/python",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0027",
+    "scenario": "Display entire contents of a small file",
+    "codePattern": "cat file",
+    "example": "cat /etc/hostname",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0028",
+    "scenario": "Show file with line numbers",
+    "codePattern": "cat -n",
+    "example": "cat -n script.sh",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0029",
+    "scenario": "View a long file interactively",
+    "codePattern": "less file",
+    "example": "less /var/log/syslog",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0030",
+    "scenario": "Show first 10 lines of a file",
+    "codePattern": "head file",
+    "example": "head access.log",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0031",
+    "scenario": "Show first N lines of a file",
+    "codePattern": "head -n N",
+    "example": "head -n 25 config.yml",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0032",
+    "scenario": "Show last 10 lines of a file",
+    "codePattern": "tail file",
+    "example": "tail error.log",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0033",
+    "scenario": "Show last N lines of a file",
+    "codePattern": "tail -n N",
+    "example": "tail -n 100 app.log",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0034",
+    "scenario": "Watch a log file update live",
+    "codePattern": "tail -f",
+    "example": "tail -f /var/log/nginx/access.log",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0035",
+    "scenario": "Count total lines in a file",
+    "codePattern": "wc -l",
+    "example": "wc -l data.csv",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0036",
+    "scenario": "Count words in a file",
+    "codePattern": "wc -w",
+    "example": "wc -w essay.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0037",
+    "scenario": "Show line, word, and byte counts",
+    "codePattern": "wc file",
+    "example": "wc report.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0038",
+    "scenario": "Find a word in a single file",
+    "codePattern": "grep pattern file",
+    "example": "grep 'error' app.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0039",
+    "scenario": "Case-insensitive search in a file",
+    "codePattern": "grep -i",
+    "example": "grep -i 'warning' app.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0040",
+    "scenario": "Search recursively in a folder",
+    "codePattern": "grep -r",
+    "example": "grep -r 'function' src/",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0041",
+    "scenario": "Show line numbers with search results",
+    "codePattern": "grep -n",
+    "example": "grep -n 'ERROR' app.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0042",
+    "scenario": "Invert search to show non-matching lines",
+    "codePattern": "grep -v",
+    "example": "grep -v '^#' config.conf",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0043",
+    "scenario": "Count how many lines match a pattern",
+    "codePattern": "grep -c",
+    "example": "grep -c 'FAIL' test-results.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0044",
+    "scenario": "Find files by name in current directory",
+    "codePattern": "find . -name",
+    "example": "find . -name '*.js'",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0045",
+    "scenario": "Find only files (not directories)",
+    "codePattern": "find -type f",
+    "example": "find . -type f -name '*.py'",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0046",
+    "scenario": "Find only directories",
+    "codePattern": "find -type d",
+    "example": "find . -type d -name 'node_modules'",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0047",
+    "scenario": "Find files modified in the last 24 hours",
+    "codePattern": "find -mtime -1",
+    "example": "find /tmp -mtime -1",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0048",
+    "scenario": "Locate a command on the system",
+    "codePattern": "which cmd",
+    "example": "which node",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0049",
+    "scenario": "Find all locations of a command",
+    "codePattern": "whereis cmd",
+    "example": "whereis python3",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0050",
+    "scenario": "Sort lines alphabetically",
+    "codePattern": "sort file",
+    "example": "sort names.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0051",
+    "scenario": "Sort numbers numerically",
+    "codePattern": "sort -n",
+    "example": "sort -n numbers.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0052",
+    "scenario": "Sort in reverse order",
+    "codePattern": "sort -r",
+    "example": "sort -r scores.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0053",
+    "scenario": "Remove duplicate adjacent lines",
+    "codePattern": "uniq",
+    "example": "sort items.txt | uniq",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0054",
+    "scenario": "Count unique lines",
+    "codePattern": "sort | uniq -c",
+    "example": "sort access.log | uniq -c",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0055",
+    "scenario": "Extract a specific column from text",
+    "codePattern": "cut -d' ' -fN",
+    "example": "cut -d' ' -f1 access.log",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0056",
+    "scenario": "Replace characters in a stream",
+    "codePattern": "tr old new",
+    "example": "tr 'a-z' 'A-Z' < file.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0057",
+    "scenario": "Delete blank lines from a file",
+    "codePattern": "grep -v '^$'",
+    "example": "grep -v '^$' messy.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0058",
+    "scenario": "Save command output to a file",
+    "codePattern": "cmd > file",
+    "example": "ls -la > listing.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0059",
+    "scenario": "Append output to end of a file",
+    "codePattern": "cmd >> file",
+    "example": "echo \"done\" >> log.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0060",
+    "scenario": "Pipe output to another command",
+    "codePattern": "cmd1 | cmd2",
+    "example": "cat file.txt | grep 'error'",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0061",
+    "scenario": "Use a file as command input",
+    "codePattern": "cmd < file",
+    "example": "wc -l < data.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0062",
+    "scenario": "Send errors to a separate file",
+    "codePattern": "cmd 2> errors",
+    "example": "node app.js 2> errors.log",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0063",
+    "scenario": "Combine stdout and stderr into one file",
+    "codePattern": "cmd > file 2>&1",
+    "example": "./build.sh > build.log 2>&1",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0064",
+    "scenario": "Save output and still see it on screen",
+    "codePattern": "cmd | tee file",
+    "example": "npm test 2>&1 | tee test-output.log",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0065",
+    "scenario": "Chain multiple filters together",
+    "codePattern": "cmd | cmd | cmd",
+    "example": "cat access.log | grep '404' | wc -l",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0066",
+    "scenario": "See your username",
+    "codePattern": "whoami",
+    "example": "whoami",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0067",
+    "scenario": "Show user ID and group memberships",
+    "codePattern": "id",
+    "example": "id",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0068",
+    "scenario": "Display system uptime",
+    "codePattern": "uptime",
+    "example": "uptime",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0069",
+    "scenario": "Show kernel and OS information",
+    "codePattern": "uname -a",
+    "example": "uname -a",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0070",
+    "scenario": "Show only the OS name",
+    "codePattern": "uname -s",
+    "example": "uname -s",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0071",
+    "scenario": "Display hostname of the machine",
+    "codePattern": "hostname",
+    "example": "hostname",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0072",
+    "scenario": "Show current date and time",
+    "codePattern": "date",
+    "example": "date",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0073",
+    "scenario": "Display formatted date",
+    "codePattern": "date +format",
+    "example": "date '+%Y-%m-%d %H:%M:%S'",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0074",
+    "scenario": "Check memory usage",
+    "codePattern": "free -h",
+    "example": "free -h",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0075",
+    "scenario": "Show disk space usage",
+    "codePattern": "df -h",
+    "example": "df -h",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0076",
+    "scenario": "Check size of current directory",
+    "codePattern": "du -sh .",
+    "example": "du -sh .",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0077",
+    "scenario": "Show sizes of all items in a folder",
+    "codePattern": "du -sh *",
+    "example": "du -sh *",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0078",
+    "scenario": "List block devices and mount points",
+    "codePattern": "lsblk",
+    "example": "lsblk",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0079",
+    "scenario": "List all running processes",
+    "codePattern": "ps aux",
+    "example": "ps aux",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0080",
+    "scenario": "Find your own processes",
+    "codePattern": "ps -u $USER",
+    "example": "ps -u $USER",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0081",
+    "scenario": "Search for a process by name",
+    "codePattern": "ps aux | grep",
+    "example": "ps aux | grep nginx",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0082",
+    "scenario": "Get PID of a process by name",
+    "codePattern": "pgrep name",
+    "example": "pgrep ssh",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0083",
+    "scenario": "Terminate a process by PID",
+    "codePattern": "kill PID",
+    "example": "kill 12345",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0084",
+    "scenario": "Force kill an unresponsive process",
+    "codePattern": "kill -9 PID",
+    "example": "kill -9 12345",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0085",
+    "scenario": "Kill all processes matching a name",
+    "codePattern": "pkill name",
+    "example": "pkill -f \"node server\"",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0086",
+    "scenario": "Run a command in the background",
+    "codePattern": "cmd &",
+    "example": "node server.js &",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0087",
+    "scenario": "Keep a command running after logout",
+    "codePattern": "nohup cmd &",
+    "example": "nohup ./backup.sh &",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0088",
+    "scenario": "List background jobs in current shell",
+    "codePattern": "jobs",
+    "example": "jobs",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0089",
+    "scenario": "Bring a background job to foreground",
+    "codePattern": "fg",
+    "example": "fg %1",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0090",
+    "scenario": "Make a script executable",
+    "codePattern": "chmod +x",
+    "example": "chmod +x deploy.sh",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0091",
+    "scenario": "Set file permissions to 755",
+    "codePattern": "chmod 755",
+    "example": "chmod 755 script.sh",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0092",
+    "scenario": "Set file permissions to 644",
+    "codePattern": "chmod 644",
+    "example": "chmod 644 config.json",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0093",
+    "scenario": "Give read permission to everyone",
+    "codePattern": "chmod +r",
+    "example": "chmod +r shared.txt",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0094",
+    "scenario": "Remove write permission for others",
+    "codePattern": "chmod o-w",
+    "example": "chmod o-w secret.key",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0095",
+    "scenario": "Change file owner",
+    "codePattern": "chown user file",
+    "example": "sudo chown www-data index.html",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0096",
+    "scenario": "Run a command as root",
+    "codePattern": "sudo cmd",
+    "example": "sudo systemctl restart nginx",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0097",
+    "scenario": "Switch to another user",
+    "codePattern": "su - user",
+    "example": "su - postgres",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0098",
+    "scenario": "Show default permission mask",
+    "codePattern": "umask",
+    "example": "umask",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0099",
+    "scenario": "Test connectivity to a host",
+    "codePattern": "ping host",
+    "example": "ping -c 4 google.com",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0100",
+    "scenario": "Download a file from a URL",
+    "codePattern": "curl -O url",
+    "example": "curl -O https://example.com/file.zip",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0101",
+    "scenario": "Fetch a URL and show response headers",
+    "codePattern": "curl -I url",
+    "example": "curl -I https://example.com",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0102",
+    "scenario": "Download a file with wget",
+    "codePattern": "wget url",
+    "example": "wget https://example.com/data.csv",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0103",
+    "scenario": "Connect to a remote server",
+    "codePattern": "ssh user@host",
+    "example": "ssh user@192.168.1.10",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0104",
+    "scenario": "Copy a file to a remote server",
+    "codePattern": "scp file user@host:",
+    "example": "scp report.pdf user@server:/tmp/",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0105",
+    "scenario": "Copy a file from a remote server",
+    "codePattern": "scp user@host:file .",
+    "example": "scp user@server:/var/log/app.log .",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0106",
+    "scenario": "Look up IP address of a domain",
+    "codePattern": "nslookup domain",
+    "example": "nslookup google.com",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0107",
+    "scenario": "Resolve DNS with dig",
+    "codePattern": "dig domain",
+    "example": "dig example.com +short",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0108",
+    "scenario": "Show listening network ports",
+    "codePattern": "ss -tlnp",
+    "example": "ss -tlnp",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0109",
+    "scenario": "Test if a port is open on a host",
+    "codePattern": "nc -zv host port",
+    "example": "nc -zv localhost 8080",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0110",
+    "scenario": "Create a gzip compressed archive",
+    "codePattern": "tar -czf",
+    "example": "tar -czf backup.tar.gz myfolder/",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0111",
+    "scenario": "Extract a .tar.gz archive",
+    "codePattern": "tar -xzf",
+    "example": "tar -xzf backup.tar.gz",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0112",
+    "scenario": "List contents of an archive without extracting",
+    "codePattern": "tar -tzf",
+    "example": "tar -tzf backup.tar.gz",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0113",
+    "scenario": "Compress a file with gzip",
+    "codePattern": "gzip file",
+    "example": "gzip large.log",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0114",
+    "scenario": "Decompress a .gz file",
+    "codePattern": "gunzip file.gz",
+    "example": "gunzip large.log.gz",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0115",
+    "scenario": "Create a zip archive",
+    "codePattern": "zip -r archive.zip dir",
+    "example": "zip -r project.zip project/",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0116",
+    "scenario": "Extract a zip file",
+    "codePattern": "unzip file.zip",
+    "example": "unzip project.zip",
+    "tags": [
+      "archive",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0117",
+    "scenario": "Show all environment variables",
+    "codePattern": "env",
+    "example": "env",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0118",
+    "scenario": "Print a specific environment variable",
+    "codePattern": "echo $VAR",
+    "example": "echo $HOME",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0119",
+    "scenario": "Set an environment variable for this session",
+    "codePattern": "export VAR=val",
+    "example": "export API_KEY=abc123",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0120",
+    "scenario": "Show command history",
+    "codePattern": "history",
+    "example": "history | tail -20",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0121",
+    "scenario": "Re-run the last command",
+    "codePattern": "!!",
+    "example": "sudo !!",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0122",
+    "scenario": "Clear the terminal screen",
+    "codePattern": "clear",
+    "example": "clear",
+    "tags": [
+      "terminal",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0123",
+    "scenario": "Read the manual for a command",
+    "codePattern": "man cmd",
+    "example": "man ls",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0124",
+    "scenario": "Show brief help for a command",
+    "codePattern": "cmd --help",
+    "example": "grep --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0125",
+    "scenario": "Create an alias for a long command",
+    "codePattern": "alias name='cmd'",
+    "example": "alias ll='ls -la'",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0126",
+    "scenario": "List all defined aliases",
+    "codePattern": "alias",
+    "example": "alias",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0127",
+    "scenario": "Update package list on Ubuntu",
+    "codePattern": "apt update",
+    "example": "sudo apt update",
+    "tags": [
+      "packages",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0128",
+    "scenario": "Install a package on Ubuntu",
+    "codePattern": "apt install pkg",
+    "example": "sudo apt install htop",
+    "tags": [
+      "packages",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0129",
+    "scenario": "Remove a package on Ubuntu",
+    "codePattern": "apt remove pkg",
+    "example": "sudo apt remove old-package",
+    "tags": [
+      "packages",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0130",
+    "scenario": "Search for available packages",
+    "codePattern": "apt search keyword",
+    "example": "apt search nginx",
+    "tags": [
+      "packages",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0131",
+    "scenario": "List running Docker containers",
+    "codePattern": "docker ps",
+    "example": "docker ps",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0132",
+    "scenario": "List all Docker containers",
+    "codePattern": "docker ps -a",
+    "example": "docker ps -a",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0133",
+    "scenario": "View Docker container logs",
+    "codePattern": "docker logs",
+    "example": "docker logs my-container",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0134",
+    "scenario": "Start a stopped container",
+    "codePattern": "docker start",
+    "example": "docker start my-container",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0135",
+    "scenario": "Stop a running container",
+    "codePattern": "docker stop",
+    "example": "docker stop my-container",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0136",
+    "scenario": "Run a command inside a container",
+    "codePattern": "docker exec",
+    "example": "docker exec -it my-container sh",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0137",
+    "scenario": "List Docker images",
+    "codePattern": "docker images",
+    "example": "docker images",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0138",
+    "scenario": "Pull a Docker image",
+    "codePattern": "docker pull image",
+    "example": "docker pull nginx:latest",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0139",
+    "scenario": "Remove a Docker container",
+    "codePattern": "docker rm",
+    "example": "docker rm my-container",
+    "tags": [
+      "docker",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0140",
+    "scenario": "Check git repository status",
+    "codePattern": "git status",
+    "example": "git status",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0141",
+    "scenario": "See which branch you are on",
+    "codePattern": "git branch",
+    "example": "git branch",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0142",
+    "scenario": "View recent commit history",
+    "codePattern": "git log --oneline",
+    "example": "git log --oneline -10",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0143",
+    "scenario": "Stage a file for commit",
+    "codePattern": "git add file",
+    "example": "git add README.md",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0144",
+    "scenario": "Stage all changed files",
+    "codePattern": "git add .",
+    "example": "git add .",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0145",
+    "scenario": "Commit staged changes with a message",
+    "codePattern": "git commit -m",
+    "example": "git commit -m \"fix: update config\"",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0146",
+    "scenario": "Pull latest changes from remote",
+    "codePattern": "git pull",
+    "example": "git pull origin main",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0147",
+    "scenario": "Push local commits to remote",
+    "codePattern": "git push",
+    "example": "git push origin main",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0148",
+    "scenario": "See unstaged differences",
+    "codePattern": "git diff",
+    "example": "git diff",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0149",
+    "scenario": "Clone a remote repository",
+    "codePattern": "git clone url",
+    "example": "git clone https://github.com/user/repo.git",
+    "tags": [
+      "git",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0150",
+    "scenario": "List pods in default namespace",
+    "codePattern": "kubectl get pods",
+    "example": "kubectl get pods",
+    "tags": [
+      "kubernetes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0151",
+    "scenario": "List pods in a specific namespace",
+    "codePattern": "kubectl get pods -n",
+    "example": "kubectl get pods -n staging",
+    "tags": [
+      "kubernetes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0152",
+    "scenario": "Describe a pod for details",
+    "codePattern": "kubectl describe pod",
+    "example": "kubectl describe pod my-pod",
+    "tags": [
+      "kubernetes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0153",
+    "scenario": "View logs from a pod",
+    "codePattern": "kubectl logs pod",
+    "example": "kubectl logs my-pod",
+    "tags": [
+      "kubernetes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0154",
+    "scenario": "Apply a Kubernetes manifest",
+    "codePattern": "kubectl apply -f",
+    "example": "kubectl apply -f deployment.yaml",
+    "tags": [
+      "kubernetes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0155",
+    "scenario": "View last 50 systemd journal entries",
+    "codePattern": "journalctl -n 50",
+    "example": "journalctl -n 50 --no-pager",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0156",
+    "scenario": "Follow systemd journal live",
+    "codePattern": "journalctl -f",
+    "example": "journalctl -f",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0157",
+    "scenario": "Read kernel ring buffer messages",
+    "codePattern": "dmesg",
+    "example": "dmesg | tail -20",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0158",
+    "scenario": "Write a message to system log",
+    "codePattern": "logger msg",
+    "example": "logger \"backup completed\"",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0159",
+    "scenario": "Edit your personal crontab",
+    "codePattern": "crontab -e",
+    "example": "crontab -e",
+    "tags": [
+      "scheduling",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0160",
+    "scenario": "List your scheduled cron jobs",
+    "codePattern": "crontab -l",
+    "example": "crontab -l",
+    "tags": [
+      "scheduling",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0161",
+    "scenario": "Run a command at a specific time once",
+    "codePattern": "at time",
+    "example": "echo \"./backup.sh\" | at 02:00",
+    "tags": [
+      "scheduling",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0162",
+    "scenario": "Delete all .tmp files found by find",
+    "codePattern": "find | xargs rm",
+    "example": "find . -name '*.tmp' | xargs rm",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0163",
+    "scenario": "Search inside every file found by find",
+    "codePattern": "find -exec grep",
+    "example": "find . -name '*.conf' -exec grep -H 'port' {} \\;",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0164",
+    "scenario": "Count files in a directory tree",
+    "codePattern": "find | wc -l",
+    "example": "find . -type f | wc -l",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0165",
+    "scenario": "Compare two text files",
+    "codePattern": "diff file1 file2",
+    "example": "diff old.conf new.conf",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0166",
+    "scenario": "Check if two files are identical",
+    "codePattern": "cmp file1 file2",
+    "example": "cmp file1.txt file2.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0167",
+    "scenario": "Determine file type",
+    "codePattern": "file path",
+    "example": "file script.sh",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0168",
+    "scenario": "Show detailed file metadata",
+    "codePattern": "stat file",
+    "example": "stat /etc/passwd",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0169",
+    "scenario": "Get just the filename from a path",
+    "codePattern": "basename path",
+    "example": "basename /var/log/nginx/access.log",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0170",
+    "scenario": "Get just the directory from a path",
+    "codePattern": "dirname path",
+    "example": "dirname /var/log/nginx/access.log",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0171",
+    "scenario": "Calculate MD5 checksum of a file",
+    "codePattern": "md5sum file",
+    "example": "md5sum download.iso",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0172",
+    "scenario": "Calculate SHA256 checksum of a file",
+    "codePattern": "sha256sum file",
+    "example": "sha256sum release.tar.gz",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0173",
+    "scenario": "Base64 encode a string",
+    "codePattern": "echo | base64",
+    "example": "echo -n 'hello' | base64",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0174",
+    "scenario": "Pause execution for N seconds",
+    "codePattern": "sleep N",
+    "example": "sleep 5",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0175",
+    "scenario": "Wait for a background process to finish",
+    "codePattern": "wait",
+    "example": "wait",
+    "tags": [
+      "process",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0176",
+    "scenario": "Show mounted filesystems",
+    "codePattern": "mount",
+    "example": "mount | column -t",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0177",
+    "scenario": "Check inode usage on disks",
+    "codePattern": "df -i",
+    "example": "df -i",
+    "tags": [
+      "disk",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0178",
+    "scenario": "See who is logged into the system",
+    "codePattern": "who",
+    "example": "who",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0179",
+    "scenario": "Show logged-in users and their activity",
+    "codePattern": "w",
+    "example": "w",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0180",
+    "scenario": "List the last logged-in users",
+    "codePattern": "last",
+    "example": "last | head -10",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0181",
+    "scenario": "Replace text in a file in-place",
+    "codePattern": "sed -i 's/a/b/'",
+    "example": "sed -i 's/debug/info/' app.conf",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0182",
+    "scenario": "Print lines matching a pattern with sed",
+    "codePattern": "sed -n '/pat/p'",
+    "example": "sed -n '/ERROR/p' app.log",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0183",
+    "scenario": "Print the first column of a file",
+    "codePattern": "awk '{print $1}'",
+    "example": "awk '{print $1}' data.tsv",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0184",
+    "scenario": "Print lines where a column equals a value",
+    "codePattern": "awk '$N==val'",
+    "example": "awk '$3 == \"error\"' log.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0185",
+    "scenario": "Print text to the terminal",
+    "codePattern": "echo text",
+    "example": "echo \"Hello, World!\"",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0186",
+    "scenario": "Print formatted output",
+    "codePattern": "printf format",
+    "example": "printf \"Name: %s\\n\" \"Alice\"",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0187",
+    "scenario": "Write text into a file with echo",
+    "codePattern": "echo > file",
+    "example": "echo \"server_name localhost;\" > nginx.conf",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0188",
+    "scenario": "Test if a file exists",
+    "codePattern": "test -f file",
+    "example": "test -f /etc/passwd && echo \"exists\"",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0189",
+    "scenario": "Test if a directory exists",
+    "codePattern": "test -d dir",
+    "example": "test -d /var/www && echo \"exists\"",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0190",
+    "scenario": "Compare two strings in a script",
+    "codePattern": "[ \"$a\" = \"$b\" ]",
+    "example": "[ \"$USER\" = \"root\" ] && echo \"root user\"",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0191",
+    "scenario": "Show directory tree structure",
+    "codePattern": "tree",
+    "example": "tree -L 2 src/",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0192",
+    "scenario": "List files with inode numbers",
+    "codePattern": "ls -i",
+    "example": "ls -i",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0193",
+    "scenario": "List files showing file types",
+    "codePattern": "ls -F",
+    "example": "ls -F",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0194",
+    "scenario": "Re-run a command every 2 seconds",
+    "codePattern": "watch -n 2 cmd",
+    "example": "watch -n 2 df -h",
+    "tags": [
+      "monitoring",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0195",
+    "scenario": "Show a calendar for the current month",
+    "codePattern": "cal",
+    "example": "cal",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0196",
+    "scenario": "Time how long a command takes",
+    "codePattern": "time cmd",
+    "example": "time npm run build",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0197",
+    "scenario": "Generate a sequence of numbers",
+    "codePattern": "seq N",
+    "example": "seq 1 10",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0198",
+    "scenario": "Merge two files side by side",
+    "codePattern": "paste f1 f2",
+    "example": "paste names.txt scores.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0199",
+    "scenario": "Append output to a file while displaying it",
+    "codePattern": "tee -a",
+    "example": "echo \"new line\" | tee -a log.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0200",
+    "scenario": "Load variables from a script into current shell",
+    "codePattern": "source file",
+    "example": "source .env",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0201",
+    "scenario": "Save current directory and switch",
+    "codePattern": "pushd dir",
+    "example": "pushd /var/log",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0202",
+    "scenario": "Return to directory saved with pushd",
+    "codePattern": "popd",
+    "example": "popd",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0203",
+    "scenario": "Resolve the absolute path of a file",
+    "codePattern": "realpath file",
+    "example": "realpath ../config/app.yml",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0204",
+    "scenario": "Create a temporary file safely",
+    "codePattern": "mktemp",
+    "example": "mktemp /tmp/script.XXXXXX",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0205",
+    "scenario": "Split a large file into smaller parts",
+    "codePattern": "split -l N",
+    "example": "split -l 1000 bigfile.txt part_",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0206",
+    "scenario": "Get lines 10 through 20 of a file",
+    "codePattern": "sed -n",
+    "example": "sed -n '10,20p' file.txt",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0207",
+    "scenario": "Show last 5 lines and follow new ones",
+    "codePattern": "tail -n 5 -f",
+    "example": "tail -n 5 -f app.log",
+    "tags": [
+      "logs",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0208",
+    "scenario": "Download a file silently showing errors only",
+    "codePattern": "curl -fsS -O",
+    "example": "curl -fsS -O https://example.com/file.tar.gz",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0209",
+    "scenario": "POST JSON data to an API",
+    "codePattern": "curl -X POST -d",
+    "example": "curl -X POST -H \"Content-Type: application/json\" -d '{\"key\":\"val\"}' https://api.example.com/data",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0210",
+    "scenario": "Run a single command on a remote host",
+    "codePattern": "ssh user@host cmd",
+    "example": "ssh user@server \"df -h\"",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0211",
+    "scenario": "Copy a directory recursively to remote",
+    "codePattern": "scp -r",
+    "example": "scp -r ./dist user@server:/var/www/",
+    "tags": [
+      "network",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0212",
+    "scenario": "Check status of a systemd service",
+    "codePattern": "systemctl status",
+    "example": "systemctl status nginx",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0213",
+    "scenario": "Start a systemd service",
+    "codePattern": "systemctl start",
+    "example": "sudo systemctl start nginx",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0214",
+    "scenario": "Stop a systemd service",
+    "codePattern": "systemctl stop",
+    "example": "sudo systemctl stop nginx",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0215",
+    "scenario": "Restart a systemd service",
+    "codePattern": "systemctl restart",
+    "example": "sudo systemctl restart nginx",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0216",
+    "scenario": "Enable a service to start on boot",
+    "codePattern": "systemctl enable",
+    "example": "sudo systemctl enable nginx",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0217",
+    "scenario": "Show CPU architecture information",
+    "codePattern": "lscpu",
+    "example": "lscpu",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0218",
+    "scenario": "List USB devices connected",
+    "codePattern": "lsusb",
+    "example": "lsusb",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0219",
+    "scenario": "Make all scripts in a folder executable",
+    "codePattern": "chmod +x *.sh",
+    "example": "chmod +x scripts/*.sh",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0220",
+    "scenario": "Set permissions recursively on a directory",
+    "codePattern": "chmod -R",
+    "example": "chmod -R 755 public/",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0221",
+    "scenario": "Show 3 lines after each match",
+    "codePattern": "grep -A 3",
+    "example": "grep -A 3 'Exception' app.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0222",
+    "scenario": "Show 3 lines before each match",
+    "codePattern": "grep -B 3",
+    "example": "grep -B 3 'Caused by' app.log",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0223",
+    "scenario": "Find most common lines in a file",
+    "codePattern": "sort | uniq -c | sort -nr",
+    "example": "sort access.log | uniq -c | sort -nr | head",
+    "tags": [
+      "text",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0224",
+    "scenario": "Use a variable in a command",
+    "codePattern": "$VAR",
+    "example": "echo \"Home is $HOME\"",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0225",
+    "scenario": "Use command output as a variable",
+    "codePattern": "$(cmd)",
+    "example": "echo \"Today is $(date +%A)\"",
+    "tags": [
+      "environment",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0226",
+    "scenario": "Search your command history",
+    "codePattern": "history | grep",
+    "example": "history | grep docker",
+    "tags": [
+      "shell",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0227",
+    "scenario": "Install npm dependencies for a project",
+    "codePattern": "npm install",
+    "example": "npm install",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0228",
+    "scenario": "Run a package.json script",
+    "codePattern": "npm run script",
+    "example": "npm run dev",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0229",
+    "scenario": "Check Node.js version",
+    "codePattern": "node -v",
+    "example": "node -v",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0230",
+    "scenario": "Check npm version",
+    "codePattern": "npm -v",
+    "example": "npm -v",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0231",
+    "scenario": "Run a Python script",
+    "codePattern": "python3 script.py",
+    "example": "python3 process_data.py",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0232",
+    "scenario": "Start Python interactive shell",
+    "codePattern": "python3",
+    "example": "python3",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0233",
+    "scenario": "Install a Python package with pip",
+    "codePattern": "pip install pkg",
+    "example": "pip install requests",
+    "tags": [
+      "development",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0234",
+    "scenario": "List files with permission details",
+    "codePattern": "ls -l",
+    "example": "ls -l /etc",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0235",
+    "scenario": "Find files owned by a specific user",
+    "codePattern": "find -user",
+    "example": "find /home -user deploy 2>/dev/null",
+    "tags": [
+      "permissions",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0236",
+    "scenario": "Find empty files in a directory",
+    "codePattern": "find -empty",
+    "example": "find . -type f -empty",
+    "tags": [
+      "search",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0237",
+    "scenario": "Truncate a file to zero bytes",
+    "codePattern": "> file",
+    "example": "> empty.log",
+    "tags": [
+      "files",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0238",
+    "scenario": "Open current directory in default file manager",
+    "codePattern": "xdg-open .",
+    "example": "xdg-open .",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0239",
+    "scenario": "Print full path after changing directory",
+    "codePattern": "cd dir && pwd",
+    "example": "cd /etc && pwd",
+    "tags": [
+      "navigation",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0240",
+    "scenario": "Practice using ls on a sample file in /tmp",
+    "codePattern": "ls",
+    "example": "ls /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0241",
+    "scenario": "Run ls with --help to learn its options",
+    "codePattern": "ls --help",
+    "example": "ls --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0242",
+    "scenario": "Combine ls with pipe to filter output",
+    "codePattern": "ls | head",
+    "example": "ls /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0243",
+    "scenario": "Save ls output to a file for later review",
+    "codePattern": "ls > out.txt",
+    "example": "ls > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0244",
+    "scenario": "Time how long ls takes to run",
+    "codePattern": "time ls",
+    "example": "time ls",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0245",
+    "scenario": "Practice using cat on a sample file in /tmp",
+    "codePattern": "cat",
+    "example": "cat /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0246",
+    "scenario": "Run cat with --help to learn its options",
+    "codePattern": "cat --help",
+    "example": "cat --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0247",
+    "scenario": "Combine cat with pipe to filter output",
+    "codePattern": "cat | head",
+    "example": "cat /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0248",
+    "scenario": "Save cat output to a file for later review",
+    "codePattern": "cat > out.txt",
+    "example": "cat > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0249",
+    "scenario": "Time how long cat takes to run",
+    "codePattern": "time cat",
+    "example": "time cat",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0250",
+    "scenario": "Practice using grep on a sample file in /tmp",
+    "codePattern": "grep",
+    "example": "grep /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0251",
+    "scenario": "Run grep with --help to learn its options",
+    "codePattern": "grep --help",
+    "example": "grep --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0252",
+    "scenario": "Combine grep with pipe to filter output",
+    "codePattern": "grep | head",
+    "example": "grep /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0253",
+    "scenario": "Save grep output to a file for later review",
+    "codePattern": "grep > out.txt",
+    "example": "grep > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0254",
+    "scenario": "Time how long grep takes to run",
+    "codePattern": "time grep",
+    "example": "time grep",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0255",
+    "scenario": "Practice using find on a sample file in /tmp",
+    "codePattern": "find",
+    "example": "find /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0256",
+    "scenario": "Run find with --help to learn its options",
+    "codePattern": "find --help",
+    "example": "find --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0257",
+    "scenario": "Combine find with pipe to filter output",
+    "codePattern": "find | head",
+    "example": "find /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0258",
+    "scenario": "Save find output to a file for later review",
+    "codePattern": "find > out.txt",
+    "example": "find > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0259",
+    "scenario": "Time how long find takes to run",
+    "codePattern": "time find",
+    "example": "time find",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0260",
+    "scenario": "Practice using chmod on a sample file in /tmp",
+    "codePattern": "chmod",
+    "example": "chmod /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0261",
+    "scenario": "Run chmod with --help to learn its options",
+    "codePattern": "chmod --help",
+    "example": "chmod --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0262",
+    "scenario": "Combine chmod with pipe to filter output",
+    "codePattern": "chmod | head",
+    "example": "chmod /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0263",
+    "scenario": "Save chmod output to a file for later review",
+    "codePattern": "chmod > out.txt",
+    "example": "chmod > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0264",
+    "scenario": "Time how long chmod takes to run",
+    "codePattern": "time chmod",
+    "example": "time chmod",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0265",
+    "scenario": "Practice using curl on a sample file in /tmp",
+    "codePattern": "curl",
+    "example": "curl /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0266",
+    "scenario": "Run curl with --help to learn its options",
+    "codePattern": "curl --help",
+    "example": "curl --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0267",
+    "scenario": "Combine curl with pipe to filter output",
+    "codePattern": "curl | head",
+    "example": "curl /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0268",
+    "scenario": "Save curl output to a file for later review",
+    "codePattern": "curl > out.txt",
+    "example": "curl > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0269",
+    "scenario": "Time how long curl takes to run",
+    "codePattern": "time curl",
+    "example": "time curl",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0270",
+    "scenario": "Practice using ssh on a sample file in /tmp",
+    "codePattern": "ssh",
+    "example": "ssh /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0271",
+    "scenario": "Run ssh with --help to learn its options",
+    "codePattern": "ssh --help",
+    "example": "ssh --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0272",
+    "scenario": "Combine ssh with pipe to filter output",
+    "codePattern": "ssh | head",
+    "example": "ssh /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0273",
+    "scenario": "Save ssh output to a file for later review",
+    "codePattern": "ssh > out.txt",
+    "example": "ssh > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0274",
+    "scenario": "Time how long ssh takes to run",
+    "codePattern": "time ssh",
+    "example": "time ssh",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0275",
+    "scenario": "Practice using tar on a sample file in /tmp",
+    "codePattern": "tar",
+    "example": "tar /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0276",
+    "scenario": "Run tar with --help to learn its options",
+    "codePattern": "tar --help",
+    "example": "tar --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0277",
+    "scenario": "Combine tar with pipe to filter output",
+    "codePattern": "tar | head",
+    "example": "tar /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0278",
+    "scenario": "Save tar output to a file for later review",
+    "codePattern": "tar > out.txt",
+    "example": "tar > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0279",
+    "scenario": "Time how long tar takes to run",
+    "codePattern": "time tar",
+    "example": "time tar",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0280",
+    "scenario": "Practice using ps on a sample file in /tmp",
+    "codePattern": "ps",
+    "example": "ps /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0281",
+    "scenario": "Run ps with --help to learn its options",
+    "codePattern": "ps --help",
+    "example": "ps --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0282",
+    "scenario": "Combine ps with pipe to filter output",
+    "codePattern": "ps | head",
+    "example": "ps /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0283",
+    "scenario": "Save ps output to a file for later review",
+    "codePattern": "ps > out.txt",
+    "example": "ps > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0284",
+    "scenario": "Time how long ps takes to run",
+    "codePattern": "time ps",
+    "example": "time ps",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0285",
+    "scenario": "Practice using kill on a sample file in /tmp",
+    "codePattern": "kill",
+    "example": "kill /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0286",
+    "scenario": "Run kill with --help to learn its options",
+    "codePattern": "kill --help",
+    "example": "kill --help",
+    "tags": [
+      "help",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0287",
+    "scenario": "Combine kill with pipe to filter output",
+    "codePattern": "kill | head",
+    "example": "kill /var/log/syslog | head -5",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0288",
+    "scenario": "Save kill output to a file for later review",
+    "codePattern": "kill > out.txt",
+    "example": "kill > output.txt",
+    "tags": [
+      "pipes",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0289",
+    "scenario": "Time how long kill takes to run",
+    "codePattern": "time kill",
+    "example": "time kill",
+    "tags": [
+      "system",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-basic-0290",
+    "scenario": "Practice using head on a sample file in /tmp",
+    "codePattern": "head",
+    "example": "head /tmp/sample.txt",
+    "tags": [
+      "practice",
+      "basics"
+    ],
+    "difficulty": "basic"
+  },
+  {
+    "id": "scenario-0001",
+    "scenario": "Trace nginx upstream timeouts during a 502 spike",
+    "codePattern": "grep|awk|sort",
+    "example": "grep ' 502 ' /var/log/nginx/access.log | awk '{print $NF}' | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "devops",
+      "nginx",
+      "logs"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0002",
+    "scenario": "Find pods with high restart counts in production",
+    "codePattern": "kubectl jsonpath",
+    "example": "kubectl get pods -n prod -o jsonpath='{range .items[*]}{.metadata.name}{\"\\t\"}{.status.containerStatuses[0].restartCount}{\"\\n\"}{end}'",
+    "tags": [
+      "kubernetes",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0003",
+    "scenario": "Validate TLS certificate expiry for public API",
+    "codePattern": "openssl s_client",
+    "example": "echo | openssl s_client -connect api.example.com:443 -servername api.example.com 2>/dev/null | openssl x509 -noout -enddate",
+    "tags": [
+      "security",
+      "tls"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0004",
+    "scenario": "Identify top CPU consumers on a saturated node",
+    "codePattern": "ps sort",
+    "example": "ps -eo pid,ppid,cmd,%cpu,%mem --sort=-%cpu | head -20",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0005",
+    "scenario": "Audit world-writable files under /etc",
+    "codePattern": "find perm",
+    "example": "find /etc -xdev -type f -perm -0002 -ls 2>/dev/null",
+    "tags": [
+      "security",
+      "audit"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0006",
+    "scenario": "Correlate ERROR lines with a request id across services",
+    "codePattern": "rg multi-file",
+    "example": "rg -n 'req_id=abc123' /var/log/api /var/log/worker /var/log/nginx",
+    "tags": [
+      "debugging",
+      "logs"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0007",
+    "scenario": "Check PostgreSQL replica recovery status",
+    "codePattern": "psql query",
+    "example": "psql -h db-replica -U monitor -tAc 'SELECT pg_is_in_recovery();'",
+    "tags": [
+      "database",
+      "postgres"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0008",
+    "scenario": "Dump long-running MySQL queries during locks",
+    "codePattern": "mysql processlist",
+    "example": "mysql -h db -e \"SELECT id,user,time,state,LEFT(info,120) FROM information_schema.processlist WHERE command!='Sleep' ORDER BY time DESC;\"",
+    "tags": [
+      "database",
+      "mysql"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0009",
+    "scenario": "List failed systemd units after deploy",
+    "codePattern": "systemctl failed",
+    "example": "systemctl --failed --no-pager",
+    "tags": [
+      "devops",
+      "systemd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0010",
+    "scenario": "Inspect Docker healthcheck failure history",
+    "codePattern": "docker inspect",
+    "example": "docker inspect -f '{{json .State.Health}}' api | jq",
+    "tags": [
+      "docker",
+      "debugging"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0011",
+    "scenario": "Tail structured errors for api in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/api --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0012",
+    "scenario": "Verify api rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/api -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0013",
+    "scenario": "Check RBAC for CI deployer on api in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/api --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0014",
+    "scenario": "Tail structured errors for worker in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/worker --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0015",
+    "scenario": "Verify worker rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/worker -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0016",
+    "scenario": "Check RBAC for CI deployer on worker in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/worker --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0017",
+    "scenario": "Tail structured errors for billing in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/billing --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0018",
+    "scenario": "Verify billing rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/billing -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0019",
+    "scenario": "Check RBAC for CI deployer on billing in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/billing --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0020",
+    "scenario": "Tail structured errors for auth in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/auth --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0021",
+    "scenario": "Verify auth rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/auth -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0022",
+    "scenario": "Check RBAC for CI deployer on auth in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/auth --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0023",
+    "scenario": "Tail structured errors for search in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/search --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0024",
+    "scenario": "Verify search rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/search -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0025",
+    "scenario": "Check RBAC for CI deployer on search in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/search --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0026",
+    "scenario": "Tail structured errors for ingest in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/ingest --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0027",
+    "scenario": "Verify ingest rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/ingest -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0028",
+    "scenario": "Check RBAC for CI deployer on ingest in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/ingest --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0029",
+    "scenario": "Tail structured errors for notify in prod during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n prod deploy/notify --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0030",
+    "scenario": "Verify notify rollout completed in prod",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/notify -n prod --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0031",
+    "scenario": "Check RBAC for CI deployer on notify in prod",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/notify --as=system:serviceaccount:ci:deployer -n prod",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0032",
+    "scenario": "Tail structured errors for api in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/api --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0033",
+    "scenario": "Verify api rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/api -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0034",
+    "scenario": "Check RBAC for CI deployer on api in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/api --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0035",
+    "scenario": "Tail structured errors for worker in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/worker --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0036",
+    "scenario": "Verify worker rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/worker -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0037",
+    "scenario": "Check RBAC for CI deployer on worker in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/worker --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0038",
+    "scenario": "Tail structured errors for billing in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/billing --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0039",
+    "scenario": "Verify billing rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/billing -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0040",
+    "scenario": "Check RBAC for CI deployer on billing in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/billing --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0041",
+    "scenario": "Tail structured errors for auth in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/auth --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0042",
+    "scenario": "Verify auth rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/auth -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0043",
+    "scenario": "Check RBAC for CI deployer on auth in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/auth --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0044",
+    "scenario": "Tail structured errors for search in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/search --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0045",
+    "scenario": "Verify search rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/search -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0046",
+    "scenario": "Check RBAC for CI deployer on search in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/search --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0047",
+    "scenario": "Tail structured errors for ingest in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/ingest --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0048",
+    "scenario": "Verify ingest rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/ingest -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0049",
+    "scenario": "Check RBAC for CI deployer on ingest in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/ingest --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0050",
+    "scenario": "Tail structured errors for notify in staging during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n staging deploy/notify --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0051",
+    "scenario": "Verify notify rollout completed in staging",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/notify -n staging --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0052",
+    "scenario": "Check RBAC for CI deployer on notify in staging",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/notify --as=system:serviceaccount:ci:deployer -n staging",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0053",
+    "scenario": "Tail structured errors for api in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/api --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0054",
+    "scenario": "Verify api rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/api -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0055",
+    "scenario": "Check RBAC for CI deployer on api in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/api --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0056",
+    "scenario": "Tail structured errors for worker in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/worker --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0057",
+    "scenario": "Verify worker rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/worker -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0058",
+    "scenario": "Check RBAC for CI deployer on worker in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/worker --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0059",
+    "scenario": "Tail structured errors for billing in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/billing --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0060",
+    "scenario": "Verify billing rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/billing -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0061",
+    "scenario": "Check RBAC for CI deployer on billing in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/billing --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0062",
+    "scenario": "Tail structured errors for auth in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/auth --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0063",
+    "scenario": "Verify auth rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/auth -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0064",
+    "scenario": "Check RBAC for CI deployer on auth in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/auth --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0065",
+    "scenario": "Tail structured errors for search in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/search --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0066",
+    "scenario": "Verify search rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/search -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0067",
+    "scenario": "Check RBAC for CI deployer on search in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/search --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0068",
+    "scenario": "Tail structured errors for ingest in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/ingest --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0069",
+    "scenario": "Verify ingest rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/ingest -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0070",
+    "scenario": "Check RBAC for CI deployer on ingest in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/ingest --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0071",
+    "scenario": "Tail structured errors for notify in payments during incident",
+    "codePattern": "kubectl logs + filter",
+    "example": "kubectl logs -n payments deploy/notify --since=30m | rg '\"level\":\"error\"'",
+    "tags": [
+      "kubernetes",
+      "logs",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0072",
+    "scenario": "Verify notify rollout completed in payments",
+    "codePattern": "kubectl rollout status",
+    "example": "kubectl rollout status deploy/notify -n payments --timeout=180s",
+    "tags": [
+      "kubernetes",
+      "cicd",
+      "deploy"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0073",
+    "scenario": "Check RBAC for CI deployer on notify in payments",
+    "codePattern": "kubectl auth can-i",
+    "example": "kubectl auth can-i patch deploy/notify --as=system:serviceaccount:ci:deployer -n payments",
+    "tags": [
+      "kubernetes",
+      "security",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0074",
+    "scenario": "Measure packet loss to db01 during outage",
+    "codePattern": "mtr",
+    "example": "mtr -rwzc 50 db01.internal",
+    "tags": [
+      "networking",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0075",
+    "scenario": "Audit listening ports on db01",
+    "codePattern": "ss listen",
+    "example": "ssh db01.internal 'ss -tulpn'",
+    "tags": [
+      "security",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0076",
+    "scenario": "Check disk inode usage on db01",
+    "codePattern": "df inodes",
+    "example": "ssh db01.internal 'df -ih / /var'",
+    "tags": [
+      "devops",
+      "disk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0077",
+    "scenario": "Capture brief perf sample on db01",
+    "codePattern": "vmstat/iostat",
+    "example": "ssh db01.internal 'vmstat 1 5; iostat -xm 1 3'",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0078",
+    "scenario": "Measure packet loss to cache01 during outage",
+    "codePattern": "mtr",
+    "example": "mtr -rwzc 50 cache01.internal",
+    "tags": [
+      "networking",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0079",
+    "scenario": "Audit listening ports on cache01",
+    "codePattern": "ss listen",
+    "example": "ssh cache01.internal 'ss -tulpn'",
+    "tags": [
+      "security",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0080",
+    "scenario": "Check disk inode usage on cache01",
+    "codePattern": "df inodes",
+    "example": "ssh cache01.internal 'df -ih / /var'",
+    "tags": [
+      "devops",
+      "disk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0081",
+    "scenario": "Capture brief perf sample on cache01",
+    "codePattern": "vmstat/iostat",
+    "example": "ssh cache01.internal 'vmstat 1 5; iostat -xm 1 3'",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0082",
+    "scenario": "Measure packet loss to kafka01 during outage",
+    "codePattern": "mtr",
+    "example": "mtr -rwzc 50 kafka01.internal",
+    "tags": [
+      "networking",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0083",
+    "scenario": "Audit listening ports on kafka01",
+    "codePattern": "ss listen",
+    "example": "ssh kafka01.internal 'ss -tulpn'",
+    "tags": [
+      "security",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0084",
+    "scenario": "Check disk inode usage on kafka01",
+    "codePattern": "df inodes",
+    "example": "ssh kafka01.internal 'df -ih / /var'",
+    "tags": [
+      "devops",
+      "disk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0085",
+    "scenario": "Capture brief perf sample on kafka01",
+    "codePattern": "vmstat/iostat",
+    "example": "ssh kafka01.internal 'vmstat 1 5; iostat -xm 1 3'",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0086",
+    "scenario": "Measure packet loss to edge01 during outage",
+    "codePattern": "mtr",
+    "example": "mtr -rwzc 50 edge01.internal",
+    "tags": [
+      "networking",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0087",
+    "scenario": "Audit listening ports on edge01",
+    "codePattern": "ss listen",
+    "example": "ssh edge01.internal 'ss -tulpn'",
+    "tags": [
+      "security",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0088",
+    "scenario": "Check disk inode usage on edge01",
+    "codePattern": "df inodes",
+    "example": "ssh edge01.internal 'df -ih / /var'",
+    "tags": [
+      "devops",
+      "disk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0089",
+    "scenario": "Capture brief perf sample on edge01",
+    "codePattern": "vmstat/iostat",
+    "example": "ssh edge01.internal 'vmstat 1 5; iostat -xm 1 3'",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0090",
+    "scenario": "Measure packet loss to bastion during outage",
+    "codePattern": "mtr",
+    "example": "mtr -rwzc 50 bastion.internal",
+    "tags": [
+      "networking",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0091",
+    "scenario": "Audit listening ports on bastion",
+    "codePattern": "ss listen",
+    "example": "ssh bastion.internal 'ss -tulpn'",
+    "tags": [
+      "security",
+      "network"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0092",
+    "scenario": "Check disk inode usage on bastion",
+    "codePattern": "df inodes",
+    "example": "ssh bastion.internal 'df -ih / /var'",
+    "tags": [
+      "devops",
+      "disk"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0093",
+    "scenario": "Capture brief perf sample on bastion",
+    "codePattern": "vmstat/iostat",
+    "example": "ssh bastion.internal 'vmstat 1 5; iostat -xm 1 3'",
+    "tags": [
+      "performance",
+      "linux"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0094",
+    "scenario": "Parse access log field 1 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $1}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0095",
+    "scenario": "Parse access log field 2 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $2}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0096",
+    "scenario": "Parse access log field 3 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $3}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0097",
+    "scenario": "Parse access log field 4 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $4}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0098",
+    "scenario": "Parse access log field 5 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $5}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0099",
+    "scenario": "Parse access log field 6 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $6}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0100",
+    "scenario": "Parse access log field 7 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $7}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0101",
+    "scenario": "Parse access log field 8 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $8}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0102",
+    "scenario": "Parse access log field 9 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $9}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0103",
+    "scenario": "Parse access log field 10 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $10}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0104",
+    "scenario": "Parse access log field 11 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $11}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0105",
+    "scenario": "Parse access log field 12 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $12}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0106",
+    "scenario": "Parse access log field 13 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $13}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0107",
+    "scenario": "Parse access log field 14 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $14}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0108",
+    "scenario": "Parse access log field 15 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $15}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0109",
+    "scenario": "Parse access log field 16 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $16}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0110",
+    "scenario": "Parse access log field 17 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $17}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0111",
+    "scenario": "Parse access log field 18 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $18}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0112",
+    "scenario": "Parse access log field 19 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $19}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0113",
+    "scenario": "Parse access log field 20 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $20}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0114",
+    "scenario": "Parse access log field 21 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $21}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0115",
+    "scenario": "Parse access log field 22 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $22}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0116",
+    "scenario": "Parse access log field 23 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $23}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0117",
+    "scenario": "Parse access log field 24 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $24}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0118",
+    "scenario": "Parse access log field 25 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $25}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0119",
+    "scenario": "Parse access log field 26 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $26}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0120",
+    "scenario": "Parse access log field 27 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $27}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0121",
+    "scenario": "Parse access log field 28 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $28}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0122",
+    "scenario": "Parse access log field 29 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $29}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0123",
+    "scenario": "Parse access log field 30 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $30}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0124",
+    "scenario": "Parse access log field 31 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $31}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0125",
+    "scenario": "Parse access log field 32 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $32}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0126",
+    "scenario": "Parse access log field 33 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $33}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0127",
+    "scenario": "Parse access log field 34 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $34}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0128",
+    "scenario": "Parse access log field 35 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $35}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0129",
+    "scenario": "Parse access log field 36 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $36}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0130",
+    "scenario": "Parse access log field 37 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $37}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0131",
+    "scenario": "Parse access log field 38 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $38}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "expert"
+  },
+  {
+    "id": "scenario-0132",
+    "scenario": "Parse access log field 39 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $39}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0133",
+    "scenario": "Parse access log field 40 for anomaly detection",
+    "codePattern": "awk uniq sort",
+    "example": "awk '{print $40}' /var/log/nginx/access.log | sort | uniq -c | sort -nr | head",
+    "tags": [
+      "logs",
+      "analytics"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0134",
+    "scenario": "Export journal errors for day window 1",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-01 00:00:00' --until '2026-07-01 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0135",
+    "scenario": "Export journal errors for day window 2",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-02 00:00:00' --until '2026-07-02 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0136",
+    "scenario": "Export journal errors for day window 3",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-03 00:00:00' --until '2026-07-03 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0137",
+    "scenario": "Export journal errors for day window 4",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-04 00:00:00' --until '2026-07-04 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0138",
+    "scenario": "Export journal errors for day window 5",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-05 00:00:00' --until '2026-07-05 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0139",
+    "scenario": "Export journal errors for day window 6",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-06 00:00:00' --until '2026-07-06 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0140",
+    "scenario": "Export journal errors for day window 7",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-07 00:00:00' --until '2026-07-07 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0141",
+    "scenario": "Export journal errors for day window 8",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-08 00:00:00' --until '2026-07-08 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0142",
+    "scenario": "Export journal errors for day window 9",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-09 00:00:00' --until '2026-07-09 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0143",
+    "scenario": "Export journal errors for day window 10",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-10 00:00:00' --until '2026-07-10 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0144",
+    "scenario": "Export journal errors for day window 11",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-11 00:00:00' --until '2026-07-11 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0145",
+    "scenario": "Export journal errors for day window 12",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-12 00:00:00' --until '2026-07-12 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0146",
+    "scenario": "Export journal errors for day window 13",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-13 00:00:00' --until '2026-07-13 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0147",
+    "scenario": "Export journal errors for day window 14",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-14 00:00:00' --until '2026-07-14 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0148",
+    "scenario": "Export journal errors for day window 15",
+    "codePattern": "journalctl export",
+    "example": "journalctl --since '2026-07-15 00:00:00' --until '2026-07-15 23:59:59' -p err..alert --no-pager",
+    "tags": [
+      "logs",
+      "linux",
+      "incident"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0149",
+    "scenario": "Validate terraform plan gate 1 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env1.tfvars -out=plan1.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0150",
+    "scenario": "Validate terraform plan gate 2 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env2.tfvars -out=plan2.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0151",
+    "scenario": "Validate terraform plan gate 3 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env3.tfvars -out=plan3.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0152",
+    "scenario": "Validate terraform plan gate 4 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env4.tfvars -out=plan4.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0153",
+    "scenario": "Validate terraform plan gate 5 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env5.tfvars -out=plan5.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0154",
+    "scenario": "Validate terraform plan gate 6 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env6.tfvars -out=plan6.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0155",
+    "scenario": "Validate terraform plan gate 7 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env7.tfvars -out=plan7.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0156",
+    "scenario": "Validate terraform plan gate 8 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env8.tfvars -out=plan8.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0157",
+    "scenario": "Validate terraform plan gate 9 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env9.tfvars -out=plan9.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0158",
+    "scenario": "Validate terraform plan gate 10 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env10.tfvars -out=plan10.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0159",
+    "scenario": "Validate terraform plan gate 11 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env11.tfvars -out=plan11.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0160",
+    "scenario": "Validate terraform plan gate 12 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env12.tfvars -out=plan12.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0161",
+    "scenario": "Validate terraform plan gate 13 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env13.tfvars -out=plan13.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0162",
+    "scenario": "Validate terraform plan gate 14 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env14.tfvars -out=plan14.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0163",
+    "scenario": "Validate terraform plan gate 15 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env15.tfvars -out=plan15.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0164",
+    "scenario": "Validate terraform plan gate 16 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env16.tfvars -out=plan16.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0165",
+    "scenario": "Validate terraform plan gate 17 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env17.tfvars -out=plan17.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0166",
+    "scenario": "Validate terraform plan gate 18 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env18.tfvars -out=plan18.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0167",
+    "scenario": "Validate terraform plan gate 19 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env19.tfvars -out=plan19.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0168",
+    "scenario": "Validate terraform plan gate 20 before apply",
+    "codePattern": "terraform plan",
+    "example": "terraform plan -var-file=env20.tfvars -out=plan20.out",
+    "tags": [
+      "iac",
+      "cicd"
+    ],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "scenario-0169",
+    "scenario": "Investigate S3 object access anomalies in bucket set 1",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-1/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0170",
+    "scenario": "Investigate S3 object access anomalies in bucket set 2",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-2/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0171",
+    "scenario": "Investigate S3 object access anomalies in bucket set 3",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-3/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0172",
+    "scenario": "Investigate S3 object access anomalies in bucket set 4",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-4/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0173",
+    "scenario": "Investigate S3 object access anomalies in bucket set 5",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-5/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0174",
+    "scenario": "Investigate S3 object access anomalies in bucket set 6",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-6/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0175",
+    "scenario": "Investigate S3 object access anomalies in bucket set 7",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-7/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0176",
+    "scenario": "Investigate S3 object access anomalies in bucket set 8",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-8/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0177",
+    "scenario": "Investigate S3 object access anomalies in bucket set 9",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-9/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0178",
+    "scenario": "Investigate S3 object access anomalies in bucket set 10",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-10/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0179",
+    "scenario": "Investigate S3 object access anomalies in bucket set 11",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-11/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0180",
+    "scenario": "Investigate S3 object access anomalies in bucket set 12",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-12/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0181",
+    "scenario": "Investigate S3 object access anomalies in bucket set 13",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-13/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0182",
+    "scenario": "Investigate S3 object access anomalies in bucket set 14",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-14/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0183",
+    "scenario": "Investigate S3 object access anomalies in bucket set 15",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-15/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0184",
+    "scenario": "Investigate S3 object access anomalies in bucket set 16",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-16/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0185",
+    "scenario": "Investigate S3 object access anomalies in bucket set 17",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-17/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0186",
+    "scenario": "Investigate S3 object access anomalies in bucket set 18",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-18/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0187",
+    "scenario": "Investigate S3 object access anomalies in bucket set 19",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-19/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0188",
+    "scenario": "Investigate S3 object access anomalies in bucket set 20",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-20/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0189",
+    "scenario": "Investigate S3 object access anomalies in bucket set 21",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-21/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0190",
+    "scenario": "Investigate S3 object access anomalies in bucket set 22",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-22/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0191",
+    "scenario": "Investigate S3 object access anomalies in bucket set 23",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-23/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0192",
+    "scenario": "Investigate S3 object access anomalies in bucket set 24",
+    "codePattern": "aws s3 ls + filter",
+    "example": "aws s3 ls s3://audit-bucket-24/ --recursive --human-readable | tail -50",
+    "tags": [
+      "aws",
+      "security",
+      "cloud"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0193",
+    "scenario": "Scan container image layer cache bloat slice 1",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=1 && NR<1+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0194",
+    "scenario": "Scan container image layer cache bloat slice 2",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=2 && NR<2+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0195",
+    "scenario": "Scan container image layer cache bloat slice 3",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=3 && NR<3+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0196",
+    "scenario": "Scan container image layer cache bloat slice 4",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=4 && NR<4+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0197",
+    "scenario": "Scan container image layer cache bloat slice 5",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=5 && NR<5+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0198",
+    "scenario": "Scan container image layer cache bloat slice 6",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=6 && NR<6+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0199",
+    "scenario": "Scan container image layer cache bloat slice 7",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=7 && NR<7+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0200",
+    "scenario": "Scan container image layer cache bloat slice 8",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=8 && NR<8+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0201",
+    "scenario": "Scan container image layer cache bloat slice 9",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=9 && NR<9+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0202",
+    "scenario": "Scan container image layer cache bloat slice 10",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=10 && NR<10+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0203",
+    "scenario": "Scan container image layer cache bloat slice 11",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=11 && NR<11+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  },
+  {
+    "id": "scenario-0204",
+    "scenario": "Scan container image layer cache bloat slice 12",
+    "codePattern": "docker system df",
+    "example": "docker system df -v | awk 'NR>=12 && NR<12+6 {print}'",
+    "tags": [
+      "docker",
+      "cicd"
+    ],
+    "difficulty": "advanced"
+  }
+]
