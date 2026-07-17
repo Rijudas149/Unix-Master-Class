@@ -13,16 +13,18 @@ const navItems = [
 
 interface SidebarProps {
   onOpenSearch: () => void
+  mobileOpen?: boolean
+  onCloseMobile?: () => void
 }
 
-export function Sidebar({ onOpenSearch }: SidebarProps) {
+export function Sidebar({ onOpenSearch, mobileOpen = false, onCloseMobile }: SidebarProps) {
   const location = useLocation()
   const { theme, toggleTheme } = useTheme()
   const { getOverallStudyProgress, getOverallPracticeProgress, getStudyStreak } = useProgress()
   const streak = getStudyStreak()
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${mobileOpen ? 'open' : ''}`}>
       <div className="sidebar-brand">
         <div className="brand-icon">$</div>
         <div>
@@ -42,6 +44,7 @@ export function Sidebar({ onOpenSearch }: SidebarProps) {
             key={item.path}
             to={item.path}
             className={`nav-link ${location.pathname === item.path || (item.path !== '/' && location.pathname.startsWith(item.path)) ? 'active' : ''}`}
+            onClick={onCloseMobile}
           >
             <span className="nav-icon">{item.icon}</span>
             {item.label}
