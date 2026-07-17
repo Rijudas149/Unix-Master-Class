@@ -1,0 +1,378 @@
+[
+  {
+    "id": "otw-bandit-0",
+    "title": "Bandit Level 0 — SSH Login",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit0.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "0",
+    "tags": ["ssh", "login", "beginner"],
+    "preview": "Learn to SSH into a remote server — your first step in Unix mastery."
+  },
+  {
+    "id": "otw-bandit-1",
+    "title": "Bandit Level 1 — Read a File",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit1.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "1",
+    "tags": ["cat", "files", "beginner"]
+  },
+  {
+    "id": "otw-bandit-2",
+    "title": "Bandit Level 2 — Hidden Files",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit2.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "2",
+    "tags": ["ls", "hidden", "beginner"]
+  },
+  {
+    "id": "otw-bandit-3",
+    "title": "Bandit Level 3 — Find Hidden Directory",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit3.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "3",
+    "tags": ["find", "directories"]
+  },
+  {
+    "id": "otw-bandit-4",
+    "title": "Bandit Level 4 — Human-Readable Files",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit4.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "4",
+    "tags": ["find", "file", "grep"]
+  },
+  {
+    "id": "otw-bandit-5",
+    "title": "Bandit Level 5 — Find by Size",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit5.html",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "problemNumber": "5",
+    "tags": ["find", "size"]
+  },
+  {
+    "id": "otw-bandit-6",
+    "title": "Bandit Level 6 — Find by Owner",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit6.html",
+    "difficulty": "medium",
+    "category": "Shell Basics",
+    "problemNumber": "6",
+    "tags": ["find", "owner", "permissions"]
+  },
+  {
+    "id": "otw-bandit-7",
+    "title": "Bandit Level 7 — Find on Server",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit7.html",
+    "difficulty": "medium",
+    "category": "Shell Basics",
+    "problemNumber": "7",
+    "tags": ["find", "grep", "server"]
+  },
+  {
+    "id": "otw-bandit-8",
+    "title": "Bandit Level 8 — Sort and Uniq",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit8.html",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "problemNumber": "8",
+    "tags": ["sort", "uniq", "pipes"]
+  },
+  {
+    "id": "otw-bandit-9",
+    "title": "Bandit Level 9 — Strings in Binary",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit9.html",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "problemNumber": "9",
+    "tags": ["strings", "grep", "binary"]
+  },
+  {
+    "id": "otw-bandit-10",
+    "title": "Bandit Level 10 — Base64 Decode",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit10.html",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "problemNumber": "10",
+    "tags": ["base64", "decode"]
+  },
+  {
+    "id": "otw-bandit-11",
+    "title": "Bandit Level 11 — Rot13 Cipher",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit11.html",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "problemNumber": "11",
+    "tags": ["tr", "cipher"]
+  },
+  {
+    "id": "otw-bandit-12",
+    "title": "Bandit Level 12 — Hexdump Reverse",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit12.html",
+    "difficulty": "hard",
+    "category": "Text Processing",
+    "problemNumber": "12",
+    "tags": ["xxd", "hexdump", "gzip"]
+  },
+  {
+    "id": "otw-bandit-13",
+    "title": "Bandit Level 13 — SSH Private Key",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/bandit/bandit13.html",
+    "difficulty": "hard",
+    "category": "Security",
+    "problemNumber": "13",
+    "tags": ["ssh", "keys", "permissions"]
+  },
+  {
+    "id": "otw-natas-0",
+    "title": "Natas Level 0 — Web + Shell",
+    "platform": "overthewire",
+    "url": "https://overthewire.org/wargames/natas/natas0.html",
+    "difficulty": "easy",
+    "category": "Web Security",
+    "problemNumber": "0",
+    "tags": ["web", "curl", "html"]
+  },
+  {
+    "id": "hr-linux-1",
+    "title": "HackerRank — Display Output",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/bash-tutorials-display-the-output/problem",
+    "difficulty": "easy",
+    "category": "Bash Scripting",
+    "tags": ["bash", "echo", "output"]
+  },
+  {
+    "id": "hr-linux-2",
+    "title": "HackerRank — Getting Started with Conditionals",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/bash-tutorials---getting-started-with-conditionals/problem",
+    "difficulty": "easy",
+    "category": "Bash Scripting",
+    "tags": ["bash", "if", "conditionals"]
+  },
+  {
+    "id": "hr-linux-3",
+    "title": "HackerRank — Looping and Skipping",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/bash-tutorials-looping-and-skipping/problem",
+    "difficulty": "easy",
+    "category": "Bash Scripting",
+    "tags": ["bash", "for", "loops"]
+  },
+  {
+    "id": "hr-linux-4",
+    "title": "HackerRank — More on Conditionals",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/bash-tutorials---more-on-conditionals/problem",
+    "difficulty": "medium",
+    "category": "Bash Scripting",
+    "tags": ["bash", "case", "conditionals"]
+  },
+  {
+    "id": "hr-linux-5",
+    "title": "HackerRank — Comparing Numbers",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/comparing-numbers/problem",
+    "difficulty": "easy",
+    "category": "Bash Scripting",
+    "tags": ["bash", "comparison"]
+  },
+  {
+    "id": "hr-linux-6",
+    "title": "HackerRank — Functions in Bash",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/functions-in-bash/problem",
+    "difficulty": "medium",
+    "category": "Bash Scripting",
+    "tags": ["bash", "functions"]
+  },
+  {
+    "id": "hr-linux-7",
+    "title": "HackerRank — Cut #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/cut-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["cut", "fields"]
+  },
+  {
+    "id": "hr-linux-8",
+    "title": "HackerRank — Head of a Text File #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/text-processing-head-of-a-text-file-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["head", "files"]
+  },
+  {
+    "id": "hr-linux-9",
+    "title": "HackerRank — Tail of a Text File #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/text-processing-tail-of-a-text-file-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["tail", "files"]
+  },
+  {
+    "id": "hr-linux-10",
+    "title": "HackerRank — 'Tr' Command #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/text-processing-tr-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["tr", "translate"]
+  },
+  {
+    "id": "hr-linux-11",
+    "title": "HackerRank — 'Sort' Command #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/text-processing-sort-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["sort"]
+  },
+  {
+    "id": "hr-linux-12",
+    "title": "HackerRank — 'Uniq' Command #1",
+    "platform": "hackerrank",
+    "url": "https://www.hackerrank.com/challenges/text-processing-in-linux-the-uniq-command-1/problem",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["uniq"]
+  },
+  {
+    "id": "gfg-grep",
+    "title": "GeeksforGeeks — grep command in Linux",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/grep-command-in-unixlinux/",
+    "difficulty": "easy",
+    "category": "Text Processing",
+    "tags": ["grep", "reference"]
+  },
+  {
+    "id": "gfg-find",
+    "title": "GeeksforGeeks — find command in Linux",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/find-command-in-linux-with-examples/",
+    "difficulty": "easy",
+    "category": "File Operations",
+    "tags": ["find", "reference"]
+  },
+  {
+    "id": "gfg-chmod",
+    "title": "GeeksforGeeks — chmod command in Linux",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/chmod-command-linux/",
+    "difficulty": "easy",
+    "category": "Permissions",
+    "tags": ["chmod", "permissions"]
+  },
+  {
+    "id": "gfg-pipes",
+    "title": "GeeksforGeeks — Piping in Unix",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/piping-in-unix-or-linux/",
+    "difficulty": "easy",
+    "category": "Pipes & Redirection",
+    "tags": ["pipes", "redirection"]
+  },
+  {
+    "id": "gfg-awk",
+    "title": "GeeksforGeeks — AWK command in Linux",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/awk-command-unixlinux/",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "tags": ["awk", "text"]
+  },
+  {
+    "id": "gfg-sed",
+    "title": "GeeksforGeeks — sed command in Linux",
+    "platform": "geeksforgeeks",
+    "url": "https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/",
+    "difficulty": "medium",
+    "category": "Text Processing",
+    "tags": ["sed", "text"]
+  },
+  {
+    "id": "exercism-shell",
+    "title": "Exercism — Shell Track",
+    "platform": "exercism",
+    "url": "https://exercism.org/tracks/shell",
+    "difficulty": "easy",
+    "category": "Shell Scripting",
+    "tags": ["bash", "exercises", "track"]
+  },
+  {
+    "id": "exercism-hello",
+    "title": "Exercism — Two Fer (Shell)",
+    "platform": "exercism",
+    "url": "https://exercism.org/tracks/shell/exercises/two-fer",
+    "difficulty": "easy",
+    "category": "Shell Scripting",
+    "tags": ["bash", "strings"]
+  },
+  {
+    "id": "exercism-leap",
+    "title": "Exercism — Leap (Shell)",
+    "platform": "exercism",
+    "url": "https://exercism.org/tracks/shell/exercises/leap",
+    "difficulty": "easy",
+    "category": "Shell Scripting",
+    "tags": ["bash", "conditionals"]
+  },
+  {
+    "id": "codewars-bash",
+    "title": "Codewars — Bash Greeting",
+    "platform": "codewars",
+    "url": "https://www.codewars.com/kata/52742f58faf5485cae000b9a",
+    "difficulty": "easy",
+    "category": "Shell Scripting",
+    "tags": ["bash", "strings"]
+  },
+  {
+    "id": "codewars-pipes",
+    "title": "Codewars — Pipe Parsing 1",
+    "platform": "codewars",
+    "url": "https://www.codewars.com/kata/52742f58faf5485cae000b9a",
+    "difficulty": "medium",
+    "category": "Pipes & Redirection",
+    "tags": ["pipes", "parsing"]
+  },
+  {
+    "id": "cmdchallenge-1",
+    "title": "CMD Challenge — Hello World",
+    "platform": "cmdchallenge",
+    "url": "https://cmdchallenge.com/",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "tags": ["challenge", "basics"]
+  },
+  {
+    "id": "lc-terminal",
+    "title": "LeetCode — Terminal Simulation",
+    "platform": "leetcode",
+    "url": "https://leetcode.com/explore/learn/card/the-Unix-shell/",
+    "difficulty": "easy",
+    "category": "Shell Basics",
+    "tags": ["shell", "tutorial"]
+  }
+]

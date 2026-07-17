@@ -1,53 +1,38 @@
-import { useState, useCallback } from 'react'
-import { ThemeProvider, useTheme } from './context/ThemeContext'
-import { commands, scenarios } from './data'
-import { Navbar } from './components/Navbar'
-import { HomePage } from './components/HomePage'
-import { CommandsPage } from './components/CommandsPage'
-import { FactsPage } from './components/FactsPage'
-import { LearnPage } from './components/LearnPage'
-import type { AppSection } from './types'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
+import { ProgressProvider } from './context/ProgressContext'
+import { Layout } from './components/Layout'
+import { Dashboard } from './pages/Dashboard'
+import { Learn } from './pages/Learn'
+import { TopicLesson } from './pages/TopicLesson'
+import { Practice } from './pages/Practice'
+import { Facts } from './pages/Facts'
+import { FactScenarioPage } from './pages/FactScenario'
+import { Tools } from './pages/Tools'
+import { Reference } from './pages/Reference'
+import './index.css'
 
-function AppContent() {
-  const [section, setSection] = useState<AppSection>('home')
-  const { isDark, toggleTheme } = useTheme()
-
-  const navigate = useCallback((next: AppSection) => {
-    setSection(next)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [])
-
-  return (
-    <div className="min-h-screen bg-[var(--app-bg)] text-[var(--text)]">
-      <Navbar
-        active={section}
-        onNavigate={navigate}
-        isDark={isDark}
-        onToggleTheme={toggleTheme}
-        commandCount={commands.length}
-        scenarioCount={scenarios.length}
-      />
-
-      <main>
-        {section === 'home' && <HomePage onNavigate={navigate} />}
-        {section === 'commands' && <CommandsPage />}
-        {section === 'facts' && <FactsPage />}
-        {section === 'learn' && <LearnPage />}
-      </main>
-
-      <footer className="border-t border-[var(--border)] py-8">
-        <div className="mx-auto max-w-7xl px-4 text-center text-sm text-[var(--text-faint)] sm:px-6">
-          <p>Unix Teacher — {commands.length} commands · {scenarios.length} scenarios</p>
-        </div>
-      </footer>
-    </div>
-  )
-}
-
-export default function App() {
+function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <ProgressProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="learn" element={<Learn />} />
+              <Route path="learn/:topicId" element={<TopicLesson />} />
+              <Route path="reference" element={<Reference />} />
+              <Route path="practice" element={<Practice />} />
+              <Route path="facts" element={<Facts />} />
+              <Route path="facts/:scenarioId" element={<FactScenarioPage />} />
+              <Route path="tools" element={<Tools />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ProgressProvider>
     </ThemeProvider>
   )
 }
+
+export default App
